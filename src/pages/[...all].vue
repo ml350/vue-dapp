@@ -1,4 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+/*global useI18n*/
+/*eslint no-undef: "error"*/
 const { t } = useI18n()
 </script>
 

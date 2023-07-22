@@ -1,4 +1,6 @@
 <script setup lang="ts">
+/*global useUserStore, ref, useRouter, useI18n*/
+/*eslint no-undef: "error"*/
 defineOptions({
   name: 'IndexPage',
 })

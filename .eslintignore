@@ -1,0 +1,6 @@
+contracts/*.sol
+*.md
+src\styles\*.css
+!.eslintrc.js
+LICENSE
+pnpm-lock.yaml

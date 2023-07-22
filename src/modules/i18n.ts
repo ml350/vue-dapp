@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Locale } from 'vue-i18n'
 import { createI18n } from 'vue-i18n'
 import { type UserModule } from '~/types'

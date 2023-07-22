@@ -13,7 +13,7 @@
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "allowJs": true,
+    // "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vitest",

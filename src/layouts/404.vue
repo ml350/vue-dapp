@@ -1,4 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+/*global useRouter, useI18n*/
+/*eslint no-undef: "error"*/
 const router = useRouter()
 const { t } = useI18n()
 </script>

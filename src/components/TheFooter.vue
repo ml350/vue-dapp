@@ -1,4 +1,6 @@
 <script setup lang="ts">
+/*global useI18n*/
+/*eslint no-undef: "error"*/
 import { availableLocales, loadLanguageAsync } from '~/modules/i18n'
 
 const { t, locale } = useI18n()

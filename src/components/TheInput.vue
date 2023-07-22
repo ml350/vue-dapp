@@ -1,4 +1,6 @@
 <script setup lang="ts">
+/*global defineModels*/
+/*eslint no-undef: "error"*/
 const { modelValue } = defineModels<{
   modelValue: string
 }>()

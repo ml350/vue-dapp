@@ -1,4 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+/*global useRouter, useUserStore, useI18n, watchEffect*/
+/*eslint no-undef: "error"*/
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const user = useUserStore()

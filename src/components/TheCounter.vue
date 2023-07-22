@@ -1,4 +1,6 @@
 <script setup lang="ts">
+/*global useCounter*/
+/*eslint no-undef: "error"*/
 const props = defineProps<{
   initial: number
 }>()

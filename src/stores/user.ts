@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', () => {
