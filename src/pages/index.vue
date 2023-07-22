@@ -23,7 +23,7 @@ const { t } = useI18n()
     </div>
     <p>
       <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
+        HaHa Hyenas NFT Collection
       </a>
     </p>
     <p>
@@ -53,6 +53,6 @@ const { t } = useI18n()
 </template>
 
 <route lang="yaml">
-meta:
-  layout: home
+  meta:
+    layout: home
 </route>

@@ -1,10 +1,9 @@
-/*global require, module*/
+/* eslint-disable @typescript-eslint/no-var-requires */
+/*global require, module, process*/
 /*eslint no-undef: "error"*/
 
-require('@nomicfoundation/hardhat-toolbox')
-require('@nomiclabs/hardhat-waffle')
-require('dotenv')
-
+require('@nomicfoundation/hardhat-toolbox') 
+require('dotenv').config(); 
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -14,11 +13,11 @@ module.exports = {
   },
   networks: {
     hardhat: {
-      chainId: 1337,
+      chainId: 5,
     },
-    mumbai: {
-      url: 'https://eth-mainnet.g.alchemy.com/v2/3GYZeNv_fZ4LaPuIROMDAom6oh4FSWsq',
-      accounts: 'private-key here',
+    goerli: {
+      url: 'https://eth-goerli.g.alchemy.com/v2/pyhnNvRT2yBPE-57XJFTOkxNGfF4MUBN',
+      accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },
-}
+} 
