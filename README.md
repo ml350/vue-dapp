@@ -1,10 +1,11 @@
-<p align='center'> 
-  ``` git clone https://github.com/ml350/vue-dapp.git```
-  ``` cd &&  pnpm install```
-  ``` pnpm dev ```
-</p> 
-<br>
+## Start
+- ``` git clone https://github.com/ml350/vue-dapp.git```
+- ``` cd &&  pnpm install```
+- ``` pnpm dev ``` 
 
+## Deploying ERC721 Smart Contract
+- ``` npx hardhat compile ```
+- ``` npx hardhat run scripts/deploy.js --network goerli ```
 
 ## Features
 
