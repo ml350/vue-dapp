@@ -18,6 +18,7 @@ module.exports = {
     goerli: {
       url: 'https://eth-goerli.g.alchemy.com/v2/pyhnNvRT2yBPE-57XJFTOkxNGfF4MUBN',
       accounts: [`0x${process.env.PRIVATE_KEY}`],
+      gasPrice: 20000000000 // 20 gwei
     },
   },
 } 

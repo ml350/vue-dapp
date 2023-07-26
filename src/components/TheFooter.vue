@@ -28,12 +28,12 @@ async function toggleLocales() {
       <div i-carbon-language />
     </a>
 
-    <RouterLink icon-btn to="/about" :title="t('button.about')" data-test-id="about">
-      <div i-carbon-dicom-overlay />
-    </RouterLink>
+   <RouterLink icon-btn to="/terms" :title="t('button.terms')" data-test-id="terms">
+    <div i-carbon-subnet-acl-rules></div>
+   </RouterLink>
 
-    <a icon-btn rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank" title="GitHub">
-      <div i-carbon-logo-github />
-    </a>
+    <RouterLink icon-btn to="/whitepaper" :title="t('button.whitepaper')" data-test-id="whitepaper">
+      <div i-carbon-dicom-overlay />
+    </RouterLink> 
   </nav>
 </template>

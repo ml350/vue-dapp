@@ -4,3 +4,5 @@ src\styles\*.css
 !.eslintrc.js
 LICENSE
 pnpm-lock.yaml
+dist/*
+locales/*.yml
