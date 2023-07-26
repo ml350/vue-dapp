@@ -1,7 +1,13 @@
-## Start
+## Start local env
 - ``` git clone https://github.com/ml350/vue-dapp.git```
 - ``` cd &&  pnpm install```
-- ``` pnpm dev ``` 
+- ``` pnpm dev ```
+
+## Push Changes
+- ``` git add . ```
+- ``` pnpm lint-staged ```
+- ``` git commit -m "commit message"  ``` 
+- ``` git push ```
 
 ## Deploying ERC721 Smart Contract
 - ``` npx hardhat compile ```
