@@ -21,6 +21,7 @@ const { t } = useI18n()
     <div text-4xl>
       <div i-carbon-3rd-party-connected inline-block />
     </div>
+    <h2> Testing </h2>
     <p>
       <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
         HaHa Hyenas NFT Collection
