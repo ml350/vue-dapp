@@ -6,7 +6,8 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 intro:
-  desc: Opinionated Vite Starter Template
+  title: Welcome to the HaHa Hyenas Club
+  desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
   aka: Also known as

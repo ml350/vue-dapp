@@ -11,7 +11,7 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="container px-6 py-8 mx-auto md:flex md:justify-between md:items-center text-xl">
+  <nav container px-6 py-8 mx-auto md:flex md:justify-between md:items-center text-xl>
     <div class="flex items-center justify-between">
       <RouterLink class="flex gap-1 text-xl font-bold md:text-2xl" to="/" :title="t('button.home')">
         <!-- Use the logo here -->

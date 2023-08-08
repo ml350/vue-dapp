@@ -1,35 +1,51 @@
 <script setup lang="ts">
-/*global useI18n*/
-/*eslint no-undef: "error"*/
-defineOptions({
-  name: 'IndexPage',
-})
-// const user = useUserStore()
-// const name = ref(user.savedName)
+  /*global useI18n*/
+  /*eslint no-undef: "error"*/
+  import 'vue3-carousel/dist/carousel.css'
+  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel' 
+  
+  defineOptions({
+    name: 'IndexPage',
+    components: {
+      Carousel,
+      Slide,
+      Pagination,
+      Navigation,
+    },
+  }) 
+  
+  // const user = useUserStore()
+  // const name = ref(user.savedName)
 
-// const router = useRouter()
-// function go() {
-//   if (name.value)
-//     router.push(`/hi/${encodeURIComponent(name.value)}`)
-// }
+  // const router = useRouter()
+  // function go() {
+  //   if (name.value)
+  //     router.push(`/hi/${encodeURIComponent(name.value)}`)
+  // } 
 
-const { t } = useI18n()
+  const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-3rd-party-connected inline-block />
-    </div>
-    <h2> Testing </h2>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        HaHa Hyenas NFT Collection
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p> 
+  <div container py-8 mx-auto md:flex md:justify-between md:items-center> 
+    <div text-left>
+      <h2 text-xl>{{ t('intro.title') }}</h2>
+      <p>
+         {{ t('intro.desc') }} 
+      </p>
+    </div> 
+    <div>
+      <carousel :items-to-show="1.5">
+        <slide v-for="slide in 6" :key="slide">
+          {{ slide }}
+        </slide>
+
+        <template #addons>
+          <navigation />
+          <pagination />
+        </template>
+      </carousel>
+    </div> 
   </div>
 </template>
 

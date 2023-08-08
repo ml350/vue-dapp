@@ -17,7 +17,7 @@
         "@typescript-eslint",
         "vue"
     ],
-    "ignorePatterns": ["**/*.css","**/*.scss"],
+    "ignorePatterns": ["**/*.css","**/*.scss", "**/*.less"],
     "rules": {
         "@typescript-eslint/no-var-requires": "error"
     }
