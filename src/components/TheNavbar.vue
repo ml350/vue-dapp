@@ -22,10 +22,13 @@ const toggleMenu = () => {
         <div i="carbon-menu" />
       </button>
     </div>  
+    
+    <div> 
+    </div>
 
     <div :class="{ 'hidden': !menuOpen.valueOf, 'md:flex': false }" class="flex gap-4 mt-4 md:mt-0">
       <button class="flex gap-1" icon-btn :title="t('button.wallet')">
-        Connect Wallet
+        {{ t('button.wallet') }}
       </button>
 
       <RouterLink class="flex gap-1" icon-btn to="/" :title="t('button.home')">

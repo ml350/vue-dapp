@@ -119,14 +119,11 @@ devDependencies:
     specifier: ^8.46.0
     version: 8.46.0
   eslint-plugin-cypress:
-    specifier: ^2.13.4
-    version: 2.13.4(eslint@8.46.0)
+    specifier: ^2.14.0
+    version: 2.14.0(eslint@8.46.0)
   eslint-plugin-vue:
     specifier: ^9.16.1
     version: 9.16.1(eslint@8.46.0)
-  flat:
-    specifier: 5.0.2
-    version: 5.0.2
   https-localhost:
     specifier: ^4.7.1
     version: 4.7.1
@@ -6631,8 +6628,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-cypress@2.13.4(eslint@8.46.0):
-    resolution: {integrity: sha512-A6CMdzFkGMkIWwVmS7DOBJfO1L2V5qcU2svlueycMJHn4MpoIhASxnDt+rI8zeA7qy9ExEGrMj1WhHcde1VrPQ==}
+  /eslint-plugin-cypress@2.14.0(eslint@8.46.0):
+    resolution: {integrity: sha512-eW6tv7iIg7xujleAJX4Ujm649Bf5jweqa4ObPEIuueYRyLZt7qXGWhCY/n4bfeFW/j6nQZwbIBHKZt6EKcL/cg==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
@@ -7442,16 +7439,19 @@ packages:
       rimraf: 3.0.2
     dev: true
 
-  /flat@4.1.1:
-    resolution: {integrity: sha512-FmTtBsHskrU6FJ2VxCnsDb84wu9zhmO3cUX2kGFb5tuwhfXxGciiT0oRY+cck35QmG+NmGh5eLz6lLCpWTqwpA==}
-    hasBin: true
-    dependencies:
-      is-buffer: 2.0.5
-    dev: true
+  # /flat@4.1.1:
+  #   resolution: {integrity: sha512-FmTtBsHskrU6FJ2VxCnsDb84wu9zhmO3cUX2kGFb5tuwhfXxGciiT0oRY+cck35QmG+NmGh5eLz6lLCpWTqwpA==}
+  #   hasBin: true
+  #   dependencies:
+  #     is-buffer: 2.0.5
+  #   dev: true
 
   /flat@5.0.2:
     resolution: {integrity: sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==}
     hasBin: true
+    dependencies:
+      is-buffer: 2.0.5
+    dev: true
 
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
