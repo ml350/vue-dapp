@@ -18,7 +18,7 @@
   <footer>
     <div container px-6 py-8 mx-auto md:py-8>
       <div sm:flex sm:items-center sm:justify-between>
-        <a href="">
+        <a href="/">
           <img :src="logo" w-40 alt="HaHa Hyenas Logo" />
         </a>
         <ul items-center mb-6 text-sm font-medium>

@@ -8,6 +8,10 @@ button:
 intro:
   title: Welcome to the HaHa Hyenas Club
   desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
+  list:
+    - Lorem Ipsum Lorem
+    - Ipsum Lorem lorem
+    - Lorem Ipsum Lore Ipsum
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
   aka: Also known as

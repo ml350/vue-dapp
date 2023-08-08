@@ -4,6 +4,9 @@
   import 'vue3-carousel/dist/carousel.css'
   import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel' 
   
+  // Importing images
+  const nft1 = 'src/assets/hyena1.jpg';
+
   defineOptions({
     name: 'IndexPage',
     components: {
@@ -12,32 +15,29 @@
       Pagination,
       Navigation,
     },
-  }) 
+  })  
   
-  // const user = useUserStore()
-  // const name = ref(user.savedName)
-
-  // const router = useRouter()
-  // function go() {
-  //   if (name.value)
-  //     router.push(`/hi/${encodeURIComponent(name.value)}`)
-  // } 
-
-  const { t } = useI18n()
+  const slides = [nft1, nft1, nft1];
+  const { t, rt  } = useI18n()   
 </script>
 
 <template>
-  <div container py-8 mx-auto md:flex md:justify-between md:items-center> 
-    <div text-left>
-      <h2 text-xl>{{ t('intro.title') }}</h2>
+  <section id="section01" container py-8 mx-auto md:flex md:justify-between md:items-center> 
+    <div class="w-1/2" text-left>
+      <h2>{{ t('intro.title') }}</h2>
       <p>
-         {{ t('intro.desc') }} 
+         {{ t('intro.desc') }}   
       </p>
+      <ul>
+        <li v-for="item in $tm('intro.list')" :key="item">
+          - {{ rt(item) }}
+        </li>
+      </ul>
     </div> 
-    <div>
-      <carousel :items-to-show="1.5">
-        <slide v-for="slide in 6" :key="slide">
-          {{ slide }}
+    <div class="w-1/2" >
+      <carousel :autoplay="2000" :wrap-around="true" :items-to-show="1">
+        <slide v-for="(slide, index) in slides" :key="index">
+          <img :src="slide" alt="NFT Slider">
         </slide>
 
         <template #addons>
@@ -46,7 +46,7 @@
         </template>
       </carousel>
     </div> 
-  </div>
+  </section>
 </template>
 
 <route lang="yaml">
