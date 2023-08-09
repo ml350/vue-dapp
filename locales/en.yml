@@ -1,3 +1,7 @@
+nav:
+  about: About
+  collection: Collection
+  faq: FAQs
 button:
   about: About
   back: Back

@@ -5,7 +5,7 @@
 </script> 
 
 <template>
-    <div w-full>
+    <div w-full my-8 py-5 border-2 border-white>
         <img :src="banner" w-full alt="HaHa Hyenas Logo" />
     </div>
 </template>
