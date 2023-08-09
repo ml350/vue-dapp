@@ -11,50 +11,52 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav container px-6 py-8 mx-auto md:flex md:justify-between md:items-center text-xl>
+  <nav container px-6 py-1 mx-auto items-center md:flex md:justify-between md:items-center text-xl>
     <div class="flex items-center justify-between">
       <RouterLink class="flex gap-1 text-xl font-bold md:text-2xl" to="/" :title="t('button.home')">
         <!-- Use the logo here -->
-        <img :src="logo" w-40 alt="HaHa Hyenas Logo" />
+        <img :src="logo" w-20 alt="HaHa Hyenas Logo" />
       </RouterLink>
 
       <button class="md:hidden flex gap-1" @click="toggleMenu" :title="t('button.menu')">
         <div i="carbon-menu" />
       </button>
     </div>  
-    <!-- Menu Items-->
-    <div flex flex-col mt-4 md:mt-0 md:flex-row md:items-center gap-4 md:gap-8>
+  
+    <div :class="{ 'hidden': !menuOpen.valueOf, 'md:flex': false }" class="flex gap-4 mt-4 items-center md:mt-0">
+        <!-- Menu Items-->
       <RouterLink to="/about" nav-link relative hover:text-yellow-300>
-        About
+        {{ t('nav.about') }}
       </RouterLink>
-      <RouterLink to="/collection" nav-link relative hover:text-yellow-300 >
-        Collection
-      </RouterLink>
-      <RouterLink to="/faq" nav-link relative hover:text-yellow-300>
-        FAQs
-      </RouterLink>
-    </div>
 
-    <div :class="{ 'hidden': !menuOpen.valueOf, 'md:flex': false }" class="flex gap-4 mt-4 md:mt-0">
-      <button class="flex gap-1" icon-btn :title="t('button.wallet')">
+      <RouterLink to="/collection" nav-link relative hover:text-yellow-300 >
+        {{ t('nav.collection') }}
+      </RouterLink>
+
+      <RouterLink to="/faq" nav-link relative hover:text-yellow-300>
+        {{ t('nav.faq') }}
+      </RouterLink>
+
+      <button class="flex gap-1 yell-bg rounded-2xl px-4 py-2 text-black" :title="t('button.wallet')">
         {{ t('button.wallet') }}
       </button>
 
-      <RouterLink class="flex gap-1" icon-btn to="/" :title="t('button.home')">
-        <div i-carbon-logo-instagram />
+      <RouterLink class="flex gap-1 " icon-btn to="/" :title="t('button.home')">
+        <div i-carbon-logo-instagram text-2xl />
       </RouterLink>
 
       <RouterLink class="flex gap-1" icon-btn to="/" :title="t('button.home')">
-        <div i-carbon-logo-discord />
+        <div i-carbon-logo-discord text-2xl />
       </RouterLink>  
 
       <RouterLink class="flex gap-1" icon-btn to="/" :title="t('button.home')">
-        <div i-carbon-logo-twitter />
+        <div i-carbon-logo-twitter text-2xl />
       </RouterLink>  
 
       <button class="flex gap-1" icon-btn :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div i="carbon-sun dark:carbon-moon" />
+        <div i="carbon-sun dark:carbon-moon" text-2xl/>
       </button>
     </div>
   </nav>
+  <hr border-b-2 border-white op-8/>
 </template>
