@@ -22,8 +22,17 @@ const toggleMenu = () => {
         <div i="carbon-menu" />
       </button>
     </div>  
-    
-    <div> 
+    <!-- Menu Items-->
+    <div flex flex-col mt-4 md:mt-0 md:flex-row md:items-center gap-4 md:gap-8>
+      <RouterLink to="/about" nav-link relative hover:text-yellow-300>
+        About
+      </RouterLink>
+      <RouterLink to="/collection" nav-link relative hover:text-yellow-300 >
+        Collection
+      </RouterLink>
+      <RouterLink to="/faq" nav-link relative hover:text-yellow-300>
+        FAQs
+      </RouterLink>
     </div>
 
     <div :class="{ 'hidden': !menuOpen.valueOf, 'md:flex': false }" class="flex gap-4 mt-4 md:mt-0">
