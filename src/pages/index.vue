@@ -28,13 +28,14 @@
       <p>
          {{ t('intro.desc') }}   
       </p>
-      <ul>
+      <ul class="mb-10">
         <li v-for="item in $tm('intro.list')" :key="item">
           - {{ rt(item) }}
         </li>
       </ul>
+      <TheButton>BUY</TheButton>
     </div> 
-    <div class="w-1/2" >
+    <div class="w-1/3" >
       <carousel :autoplay="2000" :wrap-around="true" :items-to-show="1">
         <slide v-for="(slide, index) in slides" :key="index">
           <img :src="slide" alt="NFT Slider">
