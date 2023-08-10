@@ -1,0 +1,67 @@
+@font-hand: 'Gochi Hand', cursive;
+@background-color: #f4f69f;
+@white-light-opacity: 0.8;
+
+.button-container {
+  position: relative;
+  display: inline-block;
+
+  .custom-btn {
+    background: @background-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50%; // start outside the button to the left
+      width: 100%; // twice the button's width to ensure the gradient covers the button fully
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, @white-light-opacity), transparent);
+      transition: left 0.5s; // only transition the left property for smooth movement
+    }
+
+    &:hover::after {
+      left: 100%; // move the gradient completely to the right on hover
+    }
+  }
+
+  .hahaha-text {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: @font-hand;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s, top 0.3s ease-out;
+    display: flex;
+
+    span {
+      position: relative;
+      animation: random-animation 0.7s infinite alternate;
+
+      &:nth-child(2) {
+        animation-duration: 0.8s;
+      }
+
+      &:nth-child(3) {
+        animation-duration: 0.9s;
+      }
+    }
+  }
+
+  .custom-btn:hover + .hahaha-text {
+    top: -40px;
+    opacity: 1;
+  }
+}
+
+@keyframes random-animation {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
