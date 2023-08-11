@@ -5,6 +5,8 @@
 
   const { t, locale } = useI18n()
   const logo = 'src/assets/logo.png'
+  const hyena = 'src/assets/hyenaTsp.png'
+  
   async function toggleLocales() {
     // change to some real logic
     const locales = availableLocales
@@ -12,34 +14,61 @@
     await loadLanguageAsync(newLocale)
     locale.value = newLocale
   }
+
+  // Footer Links Array
+  const footerLinks = [
+    { id: 2, route: '/terms', titleKey: 'button.terms', icon: 'i-carbon-subnet-acl-rules', label: 'Terms' },
+    { id: 1, route: '/whitepaper', titleKey: 'button.whitepaper', icon: 'i-carbon-dicom-overlay', label: 'Whitepaper' },
+    { id: 3, action: toggleLocales, titleKey: 'button.toggle_langs', icon: 'i-carbon-language', label: 'Languages' }
+  ]
+
+  // Social Media Icons
+  const socialItems = [
+    { route: '/', icon: 'i-carbon-logo-instagram'},
+    { route: '/', icon: 'i-carbon-logo-discord'},
+    { route: '/', icon: 'i-carbon-logo-twitter'},
+]
+  
 </script>
+
 
 <template>
   <footer>
-    <div container px-6 py-8 mx-auto md:py-8>
-      <div sm:flex sm:items-center sm:justify-between>
-        <a href="/">
-          <img :src="logo" w-40 alt="HaHa Hyenas Logo" />
+    <div container mb-8 px-6 py-8 mx-auto md:py-8>
+      <div flex items-center justify-between>
+
+        <div class="w-1/3">
+          <a href="/">
+          <img :src="logo" w-25 alt="HaHa Hyenas Logo" />
         </a>
-        <ul items-center mb-6 text-sm font-medium>
-          <li>
-            <RouterLink flex flex-wrap  icon-btn to="/whitepaper" :title="t('button.whitepaper')" data-test-id="whitepaper">
-              <div i-carbon-dicom-overlay /> Whitepaper
-            </RouterLink> 
-          </li>
-          <li>
-            <RouterLink flex flex-wrap icon-btn to="/terms" :title="t('button.terms')" data-test-id="terms">
-              <div i-carbon-subnet-acl-rules></div> Terms
+        </div>
+
+        <div class="w-1/3">
+            <img :src="hyena" w-40 mx-auto alt="Hyenas Transparent NFT"/>
+        </div>
+
+        <div class="w-1/3">
+          <ul items-center mb-6 text-sm font-medium>
+            <!-- Social Icons -->
+            <div flex justify-end gap-2>
+              <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex-row gap-1>
+                <div :class='item.icon' text-2xl hover:text-pink-600 > </div>
+              </RouterLink>
+          </div>
+          <h3 my-3 text-yellow-200 text-xl text-right>HaHa Hyenas NFT Collection</h3>
+          <li v-for="link in footerLinks" :key="link.id">
+            <RouterLink v-if="link.route" justify-end gap-2 mb-1 hover:text-pink-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
+              <div :class="link.icon" hover:text-pink-600 /> {{ link.label }}
             </RouterLink>
-          </li>
-          <li>
-            <a flex flex-wrap icon-btn :title="t('button.toggle_langs')" @click="toggleLocales()">
-              <div i-carbon-language /> Languages
+            <a v-else flex flex-wrap justify-end hover:text-pink-600 :title="t(link.titleKey)" @click="link.action">
+              <div :class="link.icon" /> {{ link.label }}
             </a>
           </li>
         </ul> 
-      </div>
-      <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+        </div>
+        
+        </div>
+      <hr mb-2 border-gray-200 sm:mx-auto dark:border-gray-700/>
       <span block text-sm text-gray-500 sm:text-center dark:text-gray-400>
         © 2023 <a href="https://ovoono.studio" hover:underline>OvoOno Studio</a>. All Rights Reserved.
       </span>

@@ -2,6 +2,7 @@ nav:
   about: About
   collection: Collection
   faq: FAQs
+
 button:
   about: About
   back: Back
@@ -11,6 +12,7 @@ button:
   wallet: Connect Wallet
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+
 intro:
   title: Welcome to the HaHa Hyenas Club
   desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
@@ -22,4 +24,14 @@ intro:
   hi: Hi, {name}!
   aka: Also known as
   whats-your-name: What's your name?
+
 not-found: Not found
+
+section02:
+  title: Distribution
+  desc: |
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dolor diam. Etiam vel placerat lectus. Mauris fermentum justo ex. Cras blandit nisi sed dui malesuada, et aliquam elit accumsan.
+   
+   Ut convallis venenatis ipsum, vel semper tortor sollicitudin a. Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat nisi quam vel enim. Integer in erat at est ornare fermentum.
+
+  

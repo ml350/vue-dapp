@@ -22,6 +22,7 @@
 </script>
 
 <template>
+      <!-- Section 1 -->
   <section id="section01" container py-8 mx-auto md:flex md:justify-between md:items-center> 
     <div class="w-1/2" text-left>
       <h2>{{ t('intro.title') }}</h2>
@@ -35,10 +36,11 @@
       </ul>
       <TheButton>BUY</TheButton>
     </div> 
-    <div class="w-1/3" >
-      <carousel :autoplay="2000" :wrap-around="true" :items-to-show="1">
+       <!-- Updated Carousel Styling -->
+       <div class="w-1/3 border-4 border-pink-600 p-4 rounded-lg hover:shadow-lg transition-shadow">
+      <carousel :autoplay="2000" :wrap-around="false" :items-to-show="1">
         <slide v-for="(slide, index) in slides" :key="index">
-          <img :src="slide" alt="NFT Slider">
+          <img class="rounded-md" :src="slide" alt="NFT Slider">
         </slide>
 
         <template #addons>
@@ -47,7 +49,21 @@
         </template>
       </carousel>
     </div> 
+    
   </section>
+  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+   <!-- Section 2 -->
+  <section id="section02" container py-8 mx-auto md:flex md:justify-between md:items-center>
+    <div class="w-1/2" text-left whitespace-pre-line>
+        <h2>{{ t('section02.title') }}</h2>
+        <p>{{ t("section02.desc") }}</p>
+    </div>
+    <div class="w-1/3">
+      <TheButton>Mint Now</TheButton>
+    </div>
+    
+  </section>
+  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 </template>
 
 <route lang="yaml">
