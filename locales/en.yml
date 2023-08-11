@@ -24,6 +24,7 @@ intro:
   hi: Hi, {name}!
   aka: Also known as
   whats-your-name: What's your name?
+  button: Hyenas Official Twitter
 
 not-found: Not found
 
@@ -33,5 +34,15 @@ section02:
    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dolor diam. Etiam vel placerat lectus. Mauris fermentum justo ex. Cras blandit nisi sed dui malesuada, et aliquam elit accumsan.
    
    Ut convallis venenatis ipsum, vel semper tortor sollicitudin a. Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat nisi quam vel enim. Integer in erat at est ornare fermentum.
+  button: Mint Now
+
+section03:
+  title: Roadmap
+  desc: |
+    Lorem ipsum dolor sit jaluzele, consectetur perdele elit.
+
+    Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat.
+  button: Official Discord.
+
 
   
