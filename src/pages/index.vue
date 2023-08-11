@@ -6,6 +6,7 @@
   
   // Importing images
   const nft1 = 'src/assets/hyena1.jpg';
+  const roadmap = 'src/assets/roadmap.png'
 
   defineOptions({
     name: 'IndexPage',
@@ -34,7 +35,10 @@
           - {{ rt(item) }}
         </li>
       </ul>
-      <TheButton>BUY</TheButton>
+      <TheButton>
+        <i class="i-carbon-logo-twitter text-white text-2xl inline-block mr-2 align-middle"></i> {{t("intro.button")}}
+      </TheButton>
+
     </div> 
        <!-- Updated Carousel Styling -->
        <div class="w-1/3 border-4 border-pink-600 p-4 rounded-lg hover:shadow-lg transition-shadow">
@@ -44,14 +48,14 @@
         </slide>
 
         <template #addons>
-          <navigation />
-          <pagination />
+          <navigation text-white/>
+          <pagination  text-white/>
         </template>
       </carousel>
     </div> 
-    
   </section>
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+
    <!-- Section 2 -->
   <section id="section02" container py-8 mx-auto md:flex md:justify-between md:items-center>
     <div class="w-1/2" text-left whitespace-pre-line>
@@ -59,9 +63,24 @@
         <p>{{ t("section02.desc") }}</p>
     </div>
     <div class="w-1/3">
-      <TheButton>Mint Now</TheButton>
+      <TheButton>{{ t('section02.button') }}</TheButton>
     </div>
-    
+  </section>
+  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+
+  <!-- Section 3 (Roadmap) -->
+  <section id="section03" container py-8 mx-auto md:flex md:justify-between md:items-center>
+    <div class="w-1/3" text-left>
+      <img :src="roadmap" alt="Roadmap"/>
+    </div>
+    <div class="w-1/3" text-left whitespace-pre-line>
+      <h2>{{ t('section03.title') }}</h2>
+      <p>{{ t('section03.desc') }}</p>
+      <TheButton mt-10>
+      <i class="i-carbon-logo-discord text-white text-2xl inline-block mr-2 align-middle"></i>
+       {{ t('section03.button') }}</TheButton>
+    </div>
+
   </section>
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 </template>
