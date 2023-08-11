@@ -44,7 +44,7 @@ const socialItems = [
       </RouterLink>
 
       <TheButton>Connect Wallet</TheButton>
-      
+      <!-- Social Icons -->
       <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex gap-1>
         <div :class='item.icon' text-2xl hover:text-pink-600 > </div>
       </RouterLink>
