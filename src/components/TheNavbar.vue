@@ -1,27 +1,23 @@
 <script setup lang="ts">
-/*global useI18n, ref*/
-/*eslint no-undef: "error"*/
-const { t } = useI18n()
-const menuOpen = ref(false)
-const logo = 'src/assets/logo.png'
+  /*global useI18n, Ref, ref*/
+  /*eslint no-undef: "error"*/
+  const { t } = useI18n()
+  const menuOpen: Ref<boolean> = ref(false);
+  const logo = 'src/assets/logo.png' 
 
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value
-}
+  // Menu items definition
+  const menuItems = [
+    { route: "/about", icon: 'i-carbon-carbon-for-ibm-product', label: "nav.about" },
+    { route: "/collection", icon: 'i-carbon-data-collection', label: "nav.collection" },
+    { route: "/faq", icon: 'i-carbon-information-square-filled', label: "nav.faq" }
+  ]
 
-// Menu items definition
-const menuItems = [
-  { route: "/about", label: "nav.about" },
-  { route: "/collection", label: "nav.collection" },
-  { route: "/faq", label: "nav.faq" }
-]
-
-// Social Media Icons
-const socialItems = [
-  { route: '/', icon: 'i-carbon-logo-instagram'},
-  { route: '/', icon: 'i-carbon-logo-discord'},
-  { route: '/', icon: 'i-carbon-logo-twitter'},
-]
+  // Social Media Icons
+  const socialItems = [
+    { route: '/', icon: 'i-carbon-logo-instagram', label: 'Instagram'},
+    { route: '/', icon: 'i-carbon-logo-discord', label: 'Discord'},
+    { route: '/', icon: 'i-carbon-logo-twitter', label: 'Twitter'},
+  ] 
 </script>
 
 <template>
@@ -31,27 +27,41 @@ const socialItems = [
         <img :src="logo" class="w-20" alt="HaHa Hyenas Logo" />
       </RouterLink>
 
-      <button md:hidden flex gap-1 @click="toggleMenu" :title="t('button.menu')">
+      <button md:hidden flex gap-1 @click="menuOpen = !menuOpen" :title="t('button.menu')">
         <div i="carbon-menu" />
       </button>
     </div>  
 
-    <div :class="{ 'hidden': !menuOpen.valueOf, 'md:flex': false }" flex gap-4 mt-4 items-center md:mt-0>
+    <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 items-center md:mt-0>
       <!-- Menu Items -->
-      <RouterLink v-for="item in menuItems" :key="item.route" :to="item.route" class="relative transition ease-in-out hover:text-pink-600 group" >
-        {{ t(item.label) }}
-        <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
-      </RouterLink>
+      <ul lg:flex gap-8 items-center >
+        <li v-for="item in menuItems" :key="item.route" text-left  >
+          <RouterLink :to="item.route" class="relative transition ease-in-out hover:text-pink-600 group" >
+            <div flex gap-1 items-center> 
+                <div :class="item.icon"></div>
+                {{ t(item.label) }} 
+              </div>
+            <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
+          </RouterLink>
+        </li>
+      </ul>
 
-      <TheButton>Connect Wallet</TheButton>
+      <!-- Use hidden md:flex to show only on medium and larger screens -->
+      <TheButton hidden md:flex>{{t('Connect Wallet')}}</TheButton>
+
       <!-- Social Icons -->
-      <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex gap-1>
+      <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex md:justify-end gap-1 >
         <div :class='item.icon' text-2xl hover:text-pink-600 > </div>
+        <span md:hidden>{{ item.label }}</span>
       </RouterLink>
 
       <button flex gap-1 :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div i="carbon-sun dark:carbon-moon" class="text-2xl hover:text-pink-600"/>
-      </button>
+        <div i="carbon-sun dark:carbon-moon" class="text-2xl hover:text-pink-600"/> 
+        <span md:hidden >{{ t('button.toggle_dark') }}</span>
+      </button>  
+      
+      <!-- Use hidden md:flex to show only on small screens -->
+      <TheButton md:hidden flex mt-2>{{t('Connect Wallet')}}</TheButton>
     </div>
   </nav>
   <hr class="border-b-1 border-white opacity-40"/>
