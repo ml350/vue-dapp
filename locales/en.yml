@@ -2,7 +2,6 @@ nav:
   about: About
   collection: Collection
   faq: FAQs
-
 button:
   about: About
   back: Back
@@ -12,7 +11,6 @@ button:
   wallet: Connect Wallet
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
-
 intro:
   title: Welcome to the HaHa Hyenas Club
   desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
@@ -25,9 +23,7 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
   button: Hyenas Official Twitter
-
 not-found: Not found
-
 section02:
   title: Distribution
   desc: |
@@ -35,7 +31,6 @@ section02:
    
    Ut convallis venenatis ipsum, vel semper tortor sollicitudin a. Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat nisi quam vel enim. Integer in erat at est ornare fermentum.
   button: Mint Now
-
 section03:
   title: Roadmap
   desc: |
@@ -43,6 +38,10 @@ section03:
 
     Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat.
   button: Official Discord.
-
-
+section05:
+  title: F.A.Q.
+footer:
+  title: HaHa Hyenas NFT Collection
+  year: 2023
+  rights: All Rights Reserved
   

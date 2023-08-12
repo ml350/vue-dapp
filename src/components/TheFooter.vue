@@ -31,16 +31,14 @@
   
 </script>
 
-
 <template>
   <footer>
     <div container mb-8 px-6 py-8 mx-auto md:py-8>
       <div flex items-center justify-between>
-
         <div class="w-1/3">
           <a href="/">
-          <img :src="logo" w-25 alt="HaHa Hyenas Logo" />
-        </a>
+            <img :src="logo" w-25 alt="HaHa Hyenas Logo" />
+          </a>
         </div>
 
         <div class="w-1/3">
@@ -54,23 +52,23 @@
               <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex-row gap-1>
                 <div :class='item.icon' text-2xl hover:text-pink-600 > </div>
               </RouterLink>
-          </div>
-          <h3 my-3 text-yellow-200 text-xl text-right>HaHa Hyenas NFT Collection</h3>
-          <li v-for="link in footerLinks" :key="link.id">
-            <RouterLink v-if="link.route" justify-end gap-2 mb-1 hover:text-pink-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
-              <div :class="link.icon" hover:text-pink-600 /> {{ link.label }}
-            </RouterLink>
-            <a v-else flex flex-wrap justify-end hover:text-pink-600 :title="t(link.titleKey)" @click="link.action">
-              <div :class="link.icon" /> {{ link.label }}
-            </a>
-          </li>
-        </ul> 
+            </div>
+            <h3 my-3 text-yellow-200 text-xl text-right>{{ t('footer.title') }}</h3>
+            <li v-for="link in footerLinks" :key="link.id">
+              <RouterLink v-if="link.route" justify-end gap-2 mb-1 hover:text-pink-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
+                <div :class="link.icon" hover:text-pink-600 /> {{ link.label }}
+              </RouterLink>
+              <a v-else flex flex-wrap justify-end hover:text-pink-600 :title="t(link.titleKey)" @click="link.action">
+                <div :class="link.icon" /> {{ link.label }}
+              </a>
+            </li>
+          </ul> 
         </div>
         
         </div>
       <hr mb-2 border-gray-200 sm:mx-auto dark:border-gray-700/>
       <span block text-sm text-gray-500 sm:text-center dark:text-gray-400>
-        © 2023 <a href="https://ovoono.studio" hover:underline>OvoOno Studio</a>. All Rights Reserved.
+        ©2023 <a href="https://ovoono.studio" hover:underline>OvoOno Studio</a>. {{ t('footer.rights') }}.
       </span>
     </div> 
   </footer> 

@@ -4,6 +4,18 @@
 @import './button01.less';
 // your styling goes here
 
+.bg-primary-color {
+    background: @primary-color
+}
+
+.bg-secondary-color {
+    background: @secondary-color;
+}
+
+.bg-dark-background {
+    background: @dark-background;
+}
+
 html.dark {
     background: @dark-background;
 }
@@ -32,9 +44,9 @@ li {
         color: white;
 
     }
-}
+} 
 
-nav , #section01, #section03 {
+nav, #section01, #section03 {
     .hahaha-text{
         span {
             display: none;
@@ -47,4 +59,8 @@ nav , #section01, #section03 {
     .custom-btn{
         background-color: #db2777;
     }
+}
+
+#section05 {
+    height: 80vh;
 }

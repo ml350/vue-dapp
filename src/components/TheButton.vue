@@ -15,5 +15,5 @@
   </div>
 </template>
 <style>
-@import "../styles/button01.less";
+  @import "../styles/button01.less";
 </style>
