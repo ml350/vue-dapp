@@ -22,7 +22,7 @@ intro:
   hi: Hi, {name}!
   aka: Also known as
   whats-your-name: What's your name?
-  button: Hyenas Official Twitter
+  button: Twitter
 not-found: Not found
 section02:
   title: Distribution
@@ -37,7 +37,7 @@ section03:
     Lorem ipsum dolor sit jaluzele, consectetur perdele elit.
 
     Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat.
-  button: Official Discord.
+  button: Discord
 section05:
   title: F.A.Q.
 footer:

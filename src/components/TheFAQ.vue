@@ -34,7 +34,7 @@
                 <div v-for="item in faqList" :key="item.id" class="bg-dark-background" mx-auto rounded-2xl mb-4 >
                     <button @click="toggle(item.id)" flex justify-between gap-2 items-center text-2xl pl-10 w-full p-2 text-white>
                         {{ item.question }}
-                        <div :class="item.show ? 'i-carbon-add-alt' : 'i-carbon-close-filled'"></div>
+                        <div :class="item.show ?  'i-carbon-close-filled' : 'i-carbon-add-alt'"></div>
                     </button>
                     <transition name="slide-fade">
                         <div v-if="item.show" p-2 rounded-b-lg bg-black pl-10 text-xl text-left text-white >
