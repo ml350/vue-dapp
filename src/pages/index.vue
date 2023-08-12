@@ -23,7 +23,7 @@
 </script>
 
 <template>
-      <!-- Section 1 -->
+  <!-- Section 1 -->
   <section id="section01" container py-8 mx-auto md:flex md:justify-between md:items-center> 
     <div class="w-1/2" text-left>
       <h2>{{ t('intro.title') }}</h2>
@@ -40,20 +40,20 @@
       </TheButton>
 
     </div> 
-       <!-- Updated Carousel Styling -->
-       <div class="w-1/3 border-4 border-pink-600 p-4 rounded-lg hover:shadow-lg transition-shadow">
-      <carousel :autoplay="2000" :wrap-around="false" :items-to-show="1">
+    <!-- Updated Carousel Styling -->
+    <div class="w-1/3 border-4 border-pink-600 p-4 rounded-lg hover:shadow-lg transition-shadow">
+      <carousel :autoplay="5000" :wrap-around="false" :items-to-show="1">
         <slide v-for="(slide, index) in slides" :key="index">
           <img class="rounded-md" :src="slide" alt="NFT Slider">
         </slide>
 
         <template #addons>
-          <navigation text-white/>
-          <pagination  text-white/>
+          <navigation text-white/> 
         </template>
       </carousel>
     </div> 
   </section>
+
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
    <!-- Section 2 -->
@@ -66,6 +66,7 @@
       <TheButton>{{ t('section02.button') }}</TheButton>
     </div>
   </section>
+
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 3 (Roadmap) -->
@@ -80,8 +81,13 @@
       <i class="i-carbon-logo-discord text-white text-2xl inline-block mr-2 align-middle"></i>
        {{ t('section03.button') }}</TheButton>
     </div>
-
   </section>
+  
+  <!-- Section 4 (Mint Schedule) -->
+  <section id="section04">
+    <TheCountdown></TheCountdown>
+  </section>
+
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
   <!-- Section 5 (FAQ) -->
   <section id="section05" container py-8 mx-auto >
