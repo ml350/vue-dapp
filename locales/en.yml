@@ -9,8 +9,12 @@ button:
   home: Home
   menu: Menu
   wallet: Connect Wallet
+  learn: Learn More
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+welcome:
+  heading: HaHa Hyenas
+  paragraph: Paragraph content goes here
 intro:
   title: Welcome to the HaHa Hyenas Club
   desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna

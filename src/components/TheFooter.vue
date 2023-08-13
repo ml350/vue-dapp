@@ -34,18 +34,18 @@
 <template>
   <footer>
     <div container mb-8 px-6 py-8 mx-auto md:py-8>
-      <div flex items-center justify-between>
-        <div class="w-1/3">
+      <div lg:flex items-center justify-between>
+        <div class="lg:w-1/3">
           <a href="/">
             <img :src="logo" w-25 alt="HaHa Hyenas Logo" />
           </a>
         </div>
 
-        <div class="w-1/3">
+        <div class="lg:w-1/3">
             <img :src="hyena" w-40 mx-auto alt="Hyenas Transparent NFT"/>
         </div>
 
-        <div class="w-1/3">
+        <div class="lg:w-1/3">
           <ul items-center mb-6 text-sm font-medium>
             <!-- Social Icons -->
             <div flex justify-end gap-2>

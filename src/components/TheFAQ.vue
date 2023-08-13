@@ -27,10 +27,10 @@
 </script>
 
 <template>
-    <div class="flex gap-8">
+    <div class="lg:flex gap-8">
         <!-- FAQ Accordion (60%) -->
-        <div class="w-3/5">
-            <div class="bg-primary-color w-7/8" px-12 py-6 rounded-3xl>
+        <div class="lg:w-3/5">
+            <div class="bg-primary-color lg:w-7/8" px-12 py-6 rounded-3xl>
                 <div v-for="item in faqList" :key="item.id" class="bg-dark-background" mx-auto rounded-2xl mb-4 >
                     <button @click="toggle(item.id)" flex justify-between gap-2 items-center text-2xl pl-10 w-full p-2 text-white>
                         {{ item.question }}
@@ -46,7 +46,7 @@
         </div>
         
         <!-- Image (40%) -->
-        <div class="w-2/8">
+        <div class="lg:w-2/8">
             <img :src="banner" alt="HaHa Hyenas Logo" class="w-full mx-auto h-auto">
         </div>
     </div> 
