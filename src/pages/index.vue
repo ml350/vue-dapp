@@ -132,7 +132,7 @@
 
   <!-- Section 5 (FAQ) -->
   <section id="section05" container py-8 mx-auto >
-    <h2 text-left mb-5>FAQ</h2>
+    <h2 text-left mb-5>{{ t('section05.title') }}</h2>
     <TheFAQ></TheFAQ>
   </section>
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
