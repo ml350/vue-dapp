@@ -20,7 +20,7 @@ html.dark {
     background: @dark-background;
 }
 
-h2 {
+h2,h1 {
     font-family: @font-hand;
     font-size: 44px;
     color: @primary-color;
@@ -46,6 +46,16 @@ li {
     }
 } 
 
+.glassy-bg {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
 nav, #section01, #section03, #section04 {
     .hahaha-text{
         span {
@@ -55,22 +65,3 @@ nav, #section01, #section03, #section04 {
     }
 }
 
-#section04 .custom-btn {
-    background-color: @dark-background;
-    color: white;
-    border-radius: 0.5rem;
-}
-
-#section04 {
-    h2{
-        font-family: @font-p;
-    }
-}
-
-
-#section05 {
-    height: 80vh;
-    @media screen  {
-        height: unset;
-    }
-}

@@ -13,10 +13,10 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 welcome:
-  heading: HaHa Hyenas
+  heading: Welcome to the HaHa Hyenas Club
   paragraph: Paragraph content goes here
 intro:
-  title: Welcome to the HaHa Hyenas Club
+  title: The SPECS
   desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
   list:
     - Lorem Ipsum Lorem
