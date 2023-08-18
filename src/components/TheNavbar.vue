@@ -18,18 +18,34 @@
     { route: '/', icon: 'i-carbon-logo-discord', label: 'Discord'},
     { route: '/', icon: 'i-carbon-logo-twitter', label: 'Twitter'},
   ] 
+
+  // Hamburgesa Menu
+  const genericHamburgerLine = `md:hidden h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300`;
 </script>
 
 <template>
   <nav container px-6 py-1 mx-auto items-center md:flex md:justify-between md:items-center text-xl>
     <div flex items-center justify-between>
       <RouterLink flex gap-1 text-xl font-bold md:text-2xl to="/" :title="t('button.home')">
-        <img :src="logo" class="w-20" alt="HaHa Hyenas Logo" />
+        <img :src="logo" w-15 sm:w-20 alt="HaHa Hyenas Logo" />
       </RouterLink>
-
-      <button md:hidden flex gap-1 @click="menuOpen = !menuOpen" :title="t('button.menu')">
-        <div i="carbon-menu" />
+      
+      <!-- Hamburgesa -->
+      <button
+         class="md:hidden flex flex-col h-11 w-11 justify-center items-center group"
+         @click="menuOpen = !menuOpen"
+>
+          <div
+          :class="`${genericHamburgerLine} ${menuOpen ? 'rotate-45 translate-y-3 opacity-50 group-hover:opacity-100' : 'opacity-50 group-hover:opacity-100'}`"
+          />
+          <div
+            :class="`${genericHamburgerLine} ${menuOpen ? 'opacity-0' : 'opacity-50 group-hover:opacity-100'}`"
+          />
+          <div
+            :class="`${genericHamburgerLine} ${menuOpen ? '-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100' : 'opacity-50 group-hover:opacity-100'}`"
+          />
       </button>
+
     </div>  
 
     <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 items-center md:mt-0>
