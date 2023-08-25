@@ -6,7 +6,7 @@
   import { ref } from 'vue';
   import { computed } from 'vue';
 
-  
+ 
   // Importing images
   const nft1 = 'src/assets/hyena1.jpg';
   const roadmap = 'src/assets/roadmap.png'
@@ -48,34 +48,69 @@
     }
   });
 
-  const { t, rt  } = useI18n()  
+  const { t, rt  } = useI18n() 
+
+  const section04Data = {
+  wldate: 'TBA',
+  weprice: '.07',
+  pbdate: 'TBA',
+  pbprice: '.08'
+};
+
   
    // Define the salesData
-  const salesData = [
-    { type: 'WHITELIST', icon: 'i-carbon-event' },
-    { type: 'PUBLIC SALE', icon: 'i-carbon-calendar' }
-  ]
+   const salesData = [
+    { type: 'WHITELIST', icon: 'i-carbon-event', date: section04Data.wldate, price: section04Data.weprice },
+    { type: 'PUBLIC SALE', icon: 'i-carbon-calendar', date: section04Data.pbdate, price: section04Data.pbprice }
+]
+
+// Function to replace custom tags with HTML tags
+const formatDescription = (text: string): string => {
+  let formattedText = text;
+  formattedText = formattedText.replace(/\[b\](.*?)\[\/b\]/g, '<strong>$1</strong>');
+  formattedText = formattedText.replace(/\[i\](.*?)\[\/i\]/g, '<em>$1</em>');
+  formattedText = formattedText.replace(/\[u\](.*?)\[\/u\]/g, '<u>$1</u>');
+  return formattedText;
+}
+
+const formattedDesc = formatDescription(t("section02.desc"));
+
+//Lighten the Specs like a bulb
+const hoveredIcon = ref<number | null>(null);
+
 </script>
 
 <template>
   <!-- Section 1 -->
-  <section id="section01" container px-8 py-8 mt-15 mx-auto md:flex md:justify-between md:items-center> 
-    <div class="lg:w-1/2" text-left>
-      <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl>{{ t('intro.title') }}</h2>
-      <p mb-4 text-sm sm:text-sm lg:text-lg >
+  <section id="section01" container px-8 py-8 mt-15 mx-auto md:px-20 md:flex md:justify-between md:items-center> 
+    <div class="md:w-1/2" text-left>
+      <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>{{ t('intro.title') }}</h2>
+      <p mb-4 text-base sm:text-sm lg:text-lg >
          {{ t('intro.desc') }}   
       </p>
-      <ul mb-4 >
-        <li text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl v-for="item in $tm('intro.list')" :key="item">
-          - {{ rt(item) }}
-        </li>
+      <ul 
+          @mouseleave="hoveredIcon = null" 
+          class="...">
+          <li 
+              class="flex items-center mb-4 text-sm sm:text-sm lg:text-base xl:text-base" 
+              v-for="(item, index) in $tm('intro.list')" 
+              :key="item"
+              @mouseover="hoveredIcon = index">
+            <div 
+                :class="[
+                  'i-carbon-fire icon-sequence px-4',
+                  hoveredIcon === index ? 'text-pink-600' : 'text-default-color'
+                ]">
+            </div>
+            {{ rt(item) }}
+          </li>
       </ul>
-      <TheButton mb-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>
+      <TheButton mb-4 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl sm:p-3 md:p-4 lg:p-5 xl:p-6>
          {{t("intro.button")}}
       </TheButton> 
     </div> 
     <!-- Updated Carousel Styling -->
-    <div class="lg:w-1/4">
+    <div class="lg:w-1/4 md:w-1/3">
       <div :key="activeSlide" class="rounded-md border-3 border-white p-4 bg-opacity-40 bg-gradient-to-br from-amber-200 to-pink-600 backdrop-blur-xl">
           <!-- NFT Name Title -->
           <h2 class="text-white mb-4 text-center text-2xl md:text-3xl">{{ slides[activeSlide].title }}</h2>
@@ -91,7 +126,7 @@
           </carousel>
 
           <!-- Display the rarity -->
-          <div :class="['text-center text-black mt-4 mx-auto cursor-pointer border-2 border-white rounded-full px-2 py-2 w-1/3', rarityClasses]">
+          <div :class="['text-center text-black text-sm mt-4 mx-auto cursor-pointer border-2 border-white rounded-full px-2 py-2 w-1/2', rarityClasses]">
               {{ slides[activeSlide].rarity }}
           </div>
       </div>
@@ -101,27 +136,28 @@
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
    <!-- Section 2 (Distribution) -->
-  <section id="section02" container px-8 py-8 mx-auto md:flex md:justify-between md:items-center>
+   <section id="section02" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-1/2" text-left whitespace-pre-line>
         <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl>{{ t('section02.title') }}</h2>
-        <p mb-4 text-sm lg:text-lg>{{ t("section02.desc") }}</p>
+        <!-- Using v-html to render HTML content -->
+        <p mb-4 text-sm lg:text-lg v-html="formattedDesc"></p>
     </div>
     <div class="lg:w-1/3">
       <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>{{ t('section02.button') }}</TheButton>
     </div>
-  </section>
+</section>
 
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 3 (Roadmap) -->
-  <section id="section03" container px-8 py-8 mx-auto md:flex md:justify-between md:items-center>
+  <section id="section03" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-1/3" text-left mb-4>
       <img :src="roadmap" alt="Roadmap"/>
     </div>
     <div class="lg:w-1/3" text-left whitespace-pre-line>
       <h2 mb-4 text-3xl lg:text-5xl xl:text:6xl>{{ t('section03.title') }}</h2>
       <p mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
-      <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>
+      <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>
        {{ t('section03.button') }}</TheButton>
     </div>
   </section> 
@@ -160,12 +196,13 @@
                 <div :class="sale.icon" text-black text-xl mr-4 md:text-2xl></div>
                 <h2 class="text-black font-bold text-3xl sm:text-4xl md:text-4xl">{{ sale.type }}</h2>
             </div>
-            <div class="date-div bg-black text-white px-2 py-1 mb-4 text-sm lg:text-lg rounded-3xl ">24.Jun.2024</div>
+            <div class="date-div bg-black text-white px-2 py-1 mb-4 text-sm lg:text-lg rounded-3xl ">{{sale.date}}</div>
         </div>
 
         <!-- Countdown, Price, and Mint Div -->
         <div class="flex flex-col gap-4 h-full">
-            <p class="p-2 text-white bg-black self-center md:self-end rounded-xl mb-4 text-sm lg:text-lg">Price: 0.1 <i class="mdi mdi-ethereum"></i></p>
+          <p class="p-2 text-white bg-black self-center md:self-end rounded-xl mb-4 text-sm lg:text-lg">{{sale.price}}
+            <span :class="'i-mdi-ethereum'" class="text-white px-4 "></span></p>
             <TheCountdown class="self-center" />
         </div>
     </div>
@@ -177,7 +214,7 @@
 
 
   <!-- Section 5 (FAQ) -->
-  <section id="section05" container px-8 py-8 mx-auto >
+  <section id="section05" container px-8 py-8 md:px-20 mx-auto >
     <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl text-left>{{ t('section05.title') }}</h2>
     <TheFAQ></TheFAQ>
   </section>

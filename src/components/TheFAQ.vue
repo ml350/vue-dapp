@@ -6,23 +6,26 @@
     const banner = 'src/assets/faq.png'
 
     const faqList = ref([
-        { id: 1, question: "What is HaHa Hyenas NFT Collection?",
-         answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie.",
+        { id: 1, question: "What is HaHa Hyenas?",
+         answer: "HaHa Hyenas is a collection of 5,555 unique and randomly generated NFTs living on the Ethereum Blockchain. Each NFT acts as your membership to a community of like minded comedians and comedy fans and is filled with utility to be used within the HaHa Hyena ecosystem.",
           show: false },
-        { id: 2, question: "Who is the creator of the project",
-         answer: "Click on the question to see the answer.",
+        { id: 2, question: "Why should I buy a HaHa Hyena?",
+         answer: " Besides the fantastic art each unique Hyena comes with tons of utility. This NFT works as your membership to a metaverse comedy club and discord that gives you access to informational channels, writing groups, virtual open mics, virtual comedy shows in our metaverse club and so much more. Please see our roadmap for all of the utility we offer as well as keep an eye on the ⁠📢announcements channel for new and upcoming utilities!",
           show: false },
-        { id: 3, question: "How do I become a part of the project?",
-         answer: "Click on the question to see the answer.",
+        { id: 3, question: "Who is behind HaHa Hyenas?",
+         answer: "HaHa Hyenas was created by 2 comedians who saw an opportunity to blend together comedy and web3 technology to create lasting value in the form of a NFT project. Our team will be doxxed, which means you know exactly who is behind the project and you can check it out on our team section of our website.",
           show: false },
-        { id: 4, question: "What will the mind funds be used for?",
-         answer: "Click on the question to see the answer.",
+        { id: 4, question: "What will mint funds be used for?",
+         answer: "Mint funds will be used to facilitate the utility of the project as well as a portion of the mint funds will go to the main team who invested all of their time and money to create the project. We believe our transparency of where our funds go and to whom should give a sense of security to our holders. If you have any questions just ask!",
           show: false },
-        { id: 5, question: "What is total supply of the project?",
-         answer: "Click on the question to see the answer.",
+        { id: 5, question: "What is the supply of HaHa Hyenas?",
+         answer: "There are 5,555 HaHa Hyenas including 25 unique 1 of 1 legendary Hyenas!",
           show: false },
-        { id: 6, question: "How many different traits are there?",
-         answer: "Click on the question to see the answer.", 
+        { id: 6, question: "How do you join the HaHa Hyenas Project?",
+         answer: "Just minting a HaHa Hyena or buying one off of the secondary market is all you need to enjoy all the benefits of the project. Once you hold our NFT as well as verify your holdings on Discord you will gain access to all the information and utility our project holds. For information on how to verify your NFT please access the discord channel and visit the FAQ page on our discord", 
+         show: false },
+        { id: 7, question: "How many different traits are there??",
+         answer: "There are over 200 different and unique comedy and web3 inspired traits in our collection, plus 25 pieces of 1 of 1 Legendary Hyenas. This will insure a large variety of different combinations for each of the 5,555 unique HaHa Hyenas.", 
          show: false }
     ])
 
@@ -58,8 +61,8 @@
         </div>
         
         <!-- Image (40%) -->
-        <div class="lg:block lg:w-2/8 md:w-2/8 hidden ">
-            <img :src="banner" alt="HaHa Hyenas Logo" class="w-full mx-auto h-auto">
+        <div class="lg:block lg:w-2/8 md:w-2/8 lg:flex lg:items-center  hidden ">
+            <img :src="banner" alt="HaHa Hyenas Logo" class="w-full mx-\auto h-auto">
         </div>
     </div> 
 </template>
