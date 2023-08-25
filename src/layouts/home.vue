@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <main text="center gray-700 dark:gray-200" >
+  <main text="center gray-700 dark:gray-200" px-8 >
     <TheNavbar />
     <TheHeader />
     <RouterView />

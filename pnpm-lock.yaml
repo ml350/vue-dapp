@@ -8,6 +8,9 @@ dependencies:
   '@chenfengyuan/vue-countdown':
     specifier: ^2.1.1
     version: 2.1.1(vue@3.3.4)
+  '@iconify-json/mdi':
+    specifier: ^1.1.54
+    version: 1.1.54
   '@nomiclabs/hardhat-ethers':
     specifier: ^2.2.3
     version: 2.2.3(ethers@6.7.0)(hardhat@2.17.1)
@@ -2385,9 +2388,14 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/mdi@1.1.54:
+    resolution: {integrity: sha512-3QAsxte90EalbN2e8J30OqSSZz9qN2x+kmykQwsPahoW2dOtSvj+BR9YdiUd9A5XKk2nuU4UH5Gj/cq6WZ6CzQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}
@@ -7491,6 +7499,13 @@ packages:
       rimraf: 3.0.2
     dev: true
 
+  /flat@4.1.1:
+    resolution: {integrity: sha512-FmTtBsHskrU6FJ2VxCnsDb84wu9zhmO3cUX2kGFb5tuwhfXxGciiT0oRY+cck35QmG+NmGh5eLz6lLCpWTqwpA==}
+    hasBin: true
+    dependencies:
+      is-buffer: 2.0.5
+    dev: true
+
   /flat@5.0.2:
     resolution: {integrity: sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==}
     hasBin: true
@@ -9526,7 +9541,13 @@ packages:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
 
   /minimalistic-crypto-utils@1.0.1:
-    resolution: {integrity: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==} 
+    resolution: {integrity: sha512-JIYlbt6g8i5jKfJ3xz7rF0LXmv2TkDxBLUkiBeZ7bAx4GnnNMr8xFpGnOxn6GhTEHx3SjRrZEoU+j04prX1ktg==}
+
+  /minimatch@3.0.4:
+    resolution: {integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==}
+    dependencies:
+      brace-expansion: 1.1.11
+    dev: true
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -9708,7 +9729,7 @@ packages:
       he: 1.2.0
       js-yaml: 3.13.1
       log-symbols: 3.0.0
-      minimatch: 3.1.2
+      minimatch: 3.0.4
       mkdirp: 0.5.5
       ms: 2.1.1
       node-environment-flags: 1.0.6
@@ -9739,7 +9760,7 @@ packages:
       he: 1.2.0
       js-yaml: 3.13.1
       log-symbols: 3.0.0
-      minimatch: 3.1.2
+      minimatch: 3.0.4
       mkdirp: 0.5.5
       ms: 2.1.1
       node-environment-flags: 1.0.6
@@ -13823,7 +13844,7 @@ packages:
     resolution: {integrity: sha512-W9tKgmSn0DpSatfri0nx52Joq5hVXgeLiqR/5G0sZNDoLZFOr/xjBUDcShCOGNsBnEMNo1KAMBkTej1Hm62HTw==}
     engines: {node: '>=6'}
     dependencies:
-      flat: 5.0.2
+      flat: 4.1.1
       lodash: 4.17.21
       yargs: 13.3.2
     dev: true

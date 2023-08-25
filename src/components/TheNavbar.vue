@@ -48,36 +48,35 @@
 
     </div>  
 
-    <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 items-center md:mt-0>
+    <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 py-1 items-center md:mt-0>
       <!-- Menu Items -->
-      <ul lg:flex gap-8 items-center >
-        <li v-for="item in menuItems" :key="item.route" text-left  >
-          <RouterLink :to="item.route" class="relative transition ease-in-out hover:text-pink-600 group" >
+      <ul lg:flex gap-8 py-1 items-center >
+        <li v-for="item in menuItems" :key="item.route" text-left py-1 >
+          <RouterLink :to="item.route" class="relative transition ease-in-out md:hover:text-pink-600 group" >
             <div flex gap-1 items-center> 
                 <div :class="item.icon"></div>
                 {{ t(item.label) }} 
               </div>
-            <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
+            <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 md:group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
           </RouterLink>
         </li>
       </ul>
 
-      <!-- Use hidden md:flex to show only on medium and larger screens -->
+      
       <TheButton hidden md:flex>{{t('Connect Wallet')}}</TheButton>
 
       <!-- Social Icons -->
-      <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex md:justify-end gap-1 >
-        <div :class='item.icon' text-2xl hover:text-pink-600 > </div>
+      <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex md:justify-end gap-1 py-1 >
+        <div :class='item.icon' text-2xl md:hover:text-pink-600 > </div>
         <span md:hidden>{{ item.label }}</span>
       </RouterLink>
 
-      <button flex gap-1 :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div i="carbon-sun dark:carbon-moon" class="text-2xl hover:text-pink-600"/> 
+      <button flex gap-1 py-1 :title="t('button.toggle_dark')" @click="toggleDark()">
+        <div i="carbon-sun dark:carbon-moon" class="text-2xl md:hover:text-pink-600"/> 
         <span md:hidden >{{ t('button.toggle_dark') }}</span>
       </button>  
       
-      <!-- Use hidden md:flex to show only on small screens -->
-      <TheButton md:hidden flex mt-2>{{t('Connect Wallet')}}</TheButton>
+      <TheButton md:hidden flex mt-2 pb-4>{{t('Connect Wallet')}}</TheButton>
     </div>
   </nav>
   <hr class="border-b-1 border-white opacity-40"/>

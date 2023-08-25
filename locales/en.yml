@@ -14,14 +14,17 @@ button:
   toggle_langs: Change languages
 welcome:
   heading: Welcome to the HaHa Hyenas Club
-  paragraph: Paragraph content goes here
+  paragraph: A collection of 5,555 unique pieces of art
 intro:
   title: The SPECS
-  desc: Explore the captivating world of Hyenas, a NFTS collection with 5555 unique pieces of art, celebrating the spirit of the savanna
+  desc: Explore the captivating world of HaHa Hyenas! A collection of 5,555 unique pieces of art celebrating the wild and fun spirit of Web3 and Comedy fans worldwide!
   list:
-    - Lorem Ipsum Lorem
-    - Ipsum Lorem lorem
-    - Lorem Ipsum Lore Ipsum
+    - Unique generated NFTs
+    - 25 Legendary 1 of 1 Hyenas
+    - Over 200 Comedy and Web3 inspired traits
+    - Community pass
+    - Working State of the art metaverse comedy club
+    - Minting profits will support charities
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
   aka: Also known as
@@ -31,17 +34,27 @@ not-found: Not found
 section02:
   title: Distribution
   desc: |
-   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae dolor diam. Etiam vel placerat lectus. Mauris fermentum justo ex. Cras blandit nisi sed dui malesuada, et aliquam elit accumsan.
-   
-   Ut convallis venenatis ipsum, vel semper tortor sollicitudin a. Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat nisi quam vel enim. Integer in erat at est ornare fermentum.
+   We have committed to a [b]fair[/b] and [b]easy to understand[/b] distribution method.
+   There will be only [b]two phases[/b] for mint: one for our 
+   [u]Whitelist holders[/u], given to those who have been integral in growing and contributing to our 
+   amazing project and a [u]public mint[/u]. The mint prices as of now are 
+   [b].08 ETH for public[/b] and for Whitelist there is a small discount of 
+   [b].07 ETH[/b]. Our [b]highly optimized contract[/b] created by our amazing developer should result in 
+   [b]low gas fees[/b] and a [b]seamless and effective minting process[/b].
+
+   Our mint will take place sometime in Q1 of 2024!
   button: Mint Now
 section03:
   title: Roadmap
   desc: |
-    Lorem ipsum dolor sit jaluzele, consectetur perdele elit.
-
-    Nam auctor, sem in varius tempor, ligula est molestie lorem, id volutpat.
+    Keep an eye on the ⁠📢announcements channel for new and upcoming utilities!.
   button: Discord
+
+section04:
+  wldate: TBA
+  weprice: .07 ETH
+  pbdate: TBA
+  pbprice: .08 ETH
 section05:
   title: Frequently Asked Questions
 footer:

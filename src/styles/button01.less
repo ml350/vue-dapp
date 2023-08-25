@@ -50,11 +50,22 @@
         animation-duration: 0.9s;
       }
     }
+    @media (max-width: 767px) {
+      top: -10px;
+      opacity: 0;
+    }
   }
 
   .custom-btn:hover + .hahaha-text {
     top: -40px;
     opacity: 1;
+  }
+  
+  @media (max-width: 767px) {
+    .custom-btn:hover + .hahaha-text {
+      top: -10px;
+      opacity: 0;
+    }
   }
 }
 
