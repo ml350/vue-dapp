@@ -47,7 +47,7 @@
         <div class="lg:w-3/5 ">
             <div class="bg-primary-color lg:w-7/8" px-4  py-6 rounded-3xl md:px-10>
                 <div v-for="item in faqList" :key="item.id" class="bg-dark-background" mx-auto rounded-2xl mb-4 >
-                    <button @click="toggle(item.id)" flex justify-between gap-2 items-center pl-10 w-full p-2 text-white mb-4 text-xs lg:text-xl xl:text-2xl>
+                    <button @click="toggle(item.id)" flex justify-between gap-2 items-center pl-10 w-full p-2 text-white text-xs lg:text-xl xl:text-2xl>
                         {{ item.question }}
                         <div :class="item.show ?  'i-carbon-close-filled' : 'i-carbon-add-alt'"></div>
                     </button>
