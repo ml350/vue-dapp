@@ -19,7 +19,7 @@
       <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-20 lg:mb-10">{{ t('welcome.paragraph') }}</p>
     </div>
 
-    <img :src="banner" w-full md:w-200 lg:mb-0 alt="HaHa Hyenas Logo" />
+    <img :src="banner" w-full lg:mb-0 alt="HaHa Hyenas Logo" />
   </div>
   
   <!-- Button Learn More outside the banner -->

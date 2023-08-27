@@ -45,7 +45,6 @@
             :class="`${genericHamburgerLine} ${menuOpen ? '-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100' : 'opacity-50 group-hover:opacity-100'}`"
           />
       </button>
-
     </div>  
 
     <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 py-1 items-center md:mt-0>
@@ -62,7 +61,6 @@
         </li>
       </ul>
 
-      
       <TheButton hidden md:flex>{{t('Connect Wallet')}}</TheButton>
 
       <!-- Social Icons -->
