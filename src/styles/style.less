@@ -70,8 +70,38 @@ nav, #section01, #section03 {
 }
 
 .hovered {
-    color: #d53f8c; /* This is for the text-pink-600 color */
+    color: #d53f8c;
 }
+
+// Style for intro-page
+.intro-container {
+    position: relative;
+    height: 100vh;
+  }
+  
+  
+  .light-transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f69f;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+  
+  /* Media query for small devices */
+  @media (max-width: 767px) {
+    .light-transition {
+      display: none; 
+    }
+    .intro-container{
+      height: 50vh;
+    }
+  }
 
 
 
