@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="intro-container" mb-8>
+  <div class="intro-container" fixed mb-8>
     <img
       :src="hyenaScene"
       alt="NFT Intro Image"
