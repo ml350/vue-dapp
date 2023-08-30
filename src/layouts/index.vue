@@ -6,7 +6,7 @@
 </template>
   
 <style>
-div#app, body, html {
-    height: 220px!important;
-}
+  div#app, body, html {
+      height: 220px!important;
+  }
 </style>

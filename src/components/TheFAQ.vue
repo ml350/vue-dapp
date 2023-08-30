@@ -61,8 +61,11 @@
         </div>
         
         <!-- Image (40%) -->
-        <div class="lg:block lg:w-2/8 md:w-2/8 lg:flex lg:items-center  hidden ">
+        <div class="lg:block lg:w-2/8 md:w-2/8 hidden ">
             <img :src="banner" alt="HaHa Hyenas Logo" class="w-full mx-\auto h-auto">
+            <p mt-4> Join our Discord for more information! </p>
+            <!-- Buy Button -->
+            <TheButton class="text-2xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">Discord</TheButton>
         </div>
     </div> 
 </template>

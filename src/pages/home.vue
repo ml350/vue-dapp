@@ -210,7 +210,7 @@
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 5 (FAQ) -->
-  <section id="section05" container px-8 py-8 md:px-20 mx-auto >
+  <section id="section05" items-center container px-8 py-8 md:px-20 mx-auto >
     <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl text-left>{{ t('section05.title') }}</h2>
     <TheFAQ></TheFAQ>
   </section>
