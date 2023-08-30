@@ -110,6 +110,20 @@ nav, #section01, #section03, #section05 {
       }
     }
   }
+  
+ /* CSS for fade-in effect */
+.fade-in-section.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-in-section.fade-out {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
 
 
 

@@ -5,12 +5,24 @@
   const menuOpen: Ref<boolean> = ref(false);
   const logo = 'src/assets/logo.png' 
 
+    // Scroll to section function
+    const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   // Menu items definition
   const menuItems = [
-    { route: "/about", icon: 'i-carbon-carbon-for-ibm-product', label: "nav.about" },
-    { route: "/collection", icon: 'i-carbon-data-collection', label: "nav.collection" },
-    { route: "/faq", icon: 'i-carbon-information-square-filled', label: "nav.faq" }
-  ]
+    { section: "section01", icon: 'i-carbon-carbon-for-ibm-product', label: "nav.about" },
+    { section: "section02", icon: 'i-carbon-data-collection', label: "nav.collection" },
+    { section: "section05", icon: 'i-carbon-information-square-filled', label: "nav.faq" }
+    
+  ];
 
   // Social Media Icons
   const socialItems = [
@@ -50,18 +62,18 @@
     <div :class="menuOpen ? 'visible block' : 'hidden md:flex'" gap-4 mt-4 py-1 items-center md:mt-0>
       <!-- Menu Items -->
       <ul lg:flex gap-8 py-1 items-center >
-        <li v-for="item in menuItems" :key="item.route" text-left py-1 >
-          <RouterLink :to="item.route" class="relative transition ease-in-out md:hover:text-pink-600 group" >
+        <li v-for="item in menuItems" :key="item.section" text-left py-1 >
+          <a href="#" class="relative transition ease-in-out md:hover:text-pink-600 group" @click="scrollToSection(item.section)">
             <div flex gap-1 items-center> 
-                <div :class="item.icon"></div>
-                {{ t(item.label) }} 
-              </div>
+              <div :class="item.icon"></div>
+              {{ t(item.label) }} 
+            </div>
             <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 md:group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
-          </RouterLink>
+          </a>
         </li>
       </ul>
 
-      <TheButton hidden md:flex>{{t('Connect Wallet')}}</TheButton>
+      <TheButton hidden md:flex>{{t('button.wallet')}}</TheButton>
 
       <!-- Social Icons -->
       <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex md:justify-end gap-1 py-1 >
@@ -74,7 +86,7 @@
         <span md:hidden >{{ t('button.toggle_dark') }}</span>
       </button>  
       
-      <TheButton md:hidden flex mt-2 pb-4>{{t('Connect Wallet')}}</TheButton>
+      <TheButton md:hidden flex mt-2 pb-4>{{t('button.wallet')}}</TheButton>
     </div>
   </nav>
   <hr class="border-b-1 border-white opacity-40"/>

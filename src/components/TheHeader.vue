@@ -4,7 +4,7 @@
   const banner = 'src/assets/banner1.png'
   const { t } = useI18n()
 
-  function scrollToSection(id) {
+  function scrollToSection(id : string) {
     const element = document.querySelector(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

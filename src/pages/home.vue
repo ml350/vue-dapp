@@ -80,11 +80,33 @@
 
   //Lighten the Specs like a bulb
   const hoveredIcon = ref<number | null>(null);
+
+  import { onMounted } from 'vue';
+
+  onMounted(() => {
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          entry.target.classList.remove('fade-out'); // Remove fade-out class if present
+        } else {
+          entry.target.classList.remove('fade-in'); // Remove fade-in class if present
+          entry.target.classList.add('fade-out');
+        }
+      });
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
 </script>
 
 <template>
   <!-- Section 1 -->
-  <section id="section01" container px-8 py-8 mt-15 mx-auto md:px-20 md:flex md:justify-between md:items-center> 
+  <section id="section01" class="fade-in-section" container px-8 py-8 mt-15 mx-auto md:px-20 md:flex md:justify-between md:items-center> 
     <div class="md:w-1/2" relative z-50 text-left>
       <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>{{ t('intro.title') }}</h2>
       <p mb-4 text-base sm:text-sm lg:text-lg >
@@ -138,7 +160,7 @@
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 2 (Distribution) -->
-  <section id="section02" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
+  <section id="section02" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-3/4" text-left whitespace-pre-line>
         <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl>{{ t('section02.title') }}</h2>
         <!-- Using v-html to render HTML content -->
@@ -153,7 +175,7 @@
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 3 (Roadmap) -->
-  <section id="section03" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
+  <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-1/3" text-left mb-4>
       <img :src="roadmap" alt="Roadmap"/>
     </div>
@@ -168,7 +190,7 @@
    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
   
   <!-- Section 4 (Mint Schedule) -->
-  <section id="section04" class="px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8">
+  <section id="section04" class="fade-in-section" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>
       <!-- Title and Button -->
       <div class="flex flex-row items-center justify-between w-full md:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
           <!-- Text Content on the left -->
@@ -210,7 +232,7 @@
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 5 (FAQ) -->
-  <section id="section05" items-center container px-8 py-8 md:px-20 mx-auto >
+  <section id="section05" class="fade-in-section" items-center container px-8 py-8 md:px-20 mx-auto >
     <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl text-left>{{ t('section05.title') }}</h2>
     <TheFAQ></TheFAQ>
   </section>
