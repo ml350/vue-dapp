@@ -63,11 +63,13 @@
               <div :class="item.show ? 'i-carbon-close-filled' : 'i-carbon-add-alt'"></div>
             </button>
             
-              <div v-if="item.show" class="faq-answer-container">
+            <transition>
+              <div :class="item.show ? 'faq-answer-container open' : 'faq-answer-container'">
                 <div class="faq-answer p-4 rounded-b-lg bg-black pl-10 text-xs lg:text-xl text-left text-white">
                   {{ item.answer }}
                 </div>
               </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -82,4 +84,20 @@
     </div>
   </template>
   
-    
+<style>
+  .faq-answer-container {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+  }
+
+  .faq-answer-container.open {
+      max-height: 1000px; /* This should be greater than the actual height */
+  }
+
+  #section01 {
+    .carousel__slide {
+        display: block;
+      }
+  }
+</style>
