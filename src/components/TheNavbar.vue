@@ -39,7 +39,7 @@
   <nav container px-6 py-1 mx-auto items-center md:flex md:justify-between md:items-center text-xl>
     <div flex items-center justify-between>
       <RouterLink flex gap-1 text-xl font-bold md:text-2xl to="/" :title="t('button.home')">
-        <img :src="logo" w-15 sm:w-20 alt="HaHa Hyenas Logo" />
+        <img class="logo" :src="logo" w-15 sm:w-20 alt="HaHa Hyenas Logo" />
       </RouterLink>
       
       <!-- Hamburgesa -->
