@@ -1,13 +1,66 @@
-html:not(.dark) {
-    background: #fff;
+@white: #fcfcf5;
+@dark: #1c2129;
+@mediumdark: #374151;
 
-    h1, h2, p {
-        color: #374151;
+html:not(.dark) {
+    background: @white;
+
+    h1, h2, h3, p {
+        color: @dark;
     }
 
-    nav {
-        .logo {
-            content: url('src/assets/logo2.png')
+    hr {
+        &.border-white {
+            border-color: @dark;
         }
     }
+    
+    .logo {
+        content: url('src/assets/logo2.png')
+    }
+    
+
+    .roadmap {
+        content: url('src/assets/darkRoadmap.png')
+    }
+
+    .faqImg{
+        content: url('src/assets/faqDark.png');
+    }
+    
+
+    button.custom-btn {
+        background: @mediumdark;
+        color: @white;
+
+        &::after {
+            opacity: 0.4; 
+        }
+
+    }
+
+    .hahaha-text, .schedule, .mintSchedule, .hamburgesa-line {
+        color: @dark;
+    }
+
+    .mintSchedule{
+        border-color: @dark;
+    }
+
+    .hamburgesa-line, .salesType, .faqBg {
+        background-color: @dark;
+    }
+
+    .salePrice, .saleText, .counter, .counterSpan{
+        color: @white;
+    }
+
+    .bg-dark-background, .faq-answer-container, .date-div, .salePrice {
+        background-color: @mediumdark;
+    }
+    
+
+    
+    
+   
 }

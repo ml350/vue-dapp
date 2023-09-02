@@ -45,7 +45,7 @@
     <div class="lg:flex gap-8">
       <!-- FAQ Accordion (60%) -->
       <div class="lg:w-3/5">
-        <div class="bg-primary-color lg:w-7/8" px-4 py-6 rounded-3xl md:px-10>
+        <div class="faqBg bg-primary-color lg:w-7/8" px-4 py-6 rounded-3xl md:px-10>
           <div v-for="item in faqList" :key="item.id" class="bg-dark-background mx-auto rounded-2xl mb-4">
             <button
               @click="toggle(item.id)"
@@ -65,7 +65,7 @@
             
             <transition>
               <div :class="item.show ? 'faq-answer-container open' : 'faq-answer-container'">
-                <div class="faq-answer p-4 rounded-b-lg bg-black pl-10 text-xs lg:text-xl text-left text-white">
+                <div class="faq-answer p-4 rounded-b-lg pl-10 text-xs lg:text-xl text-left text-white">
                   {{ item.answer }}
                 </div>
               </div>
@@ -76,7 +76,7 @@
   
       <!-- Image (40%) -->
       <div class="lg:block lg:w-2/8 md:w-2/8 hidden">
-        <img :src="banner" alt="HaHa Hyenas Logo" class="w-full mx-auto h-auto">
+        <img :src="banner" alt="HaHa Hyenas Logo" class="faqImg w-full mx-auto h-auto">
         <p mt-4> Join our Discord for more information! </p>
         <!-- Discord Button -->
         <TheButton class="text-2xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">Discord</TheButton>

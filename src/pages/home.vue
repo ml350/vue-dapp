@@ -100,7 +100,7 @@
   <!-- Section 3 (Roadmap) -->
   <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-1/3" text-left mb-4>
-      <img :src="roadmap" alt="Roadmap"/>
+      <img class="roadmap" :src="roadmap" alt="Roadmap"/>
     </div>
     <div class="lg:w-1/3" text-left whitespace-pre-line>
       <h2 mb-4 text-3xl lg:text-6xl xl:text:6xl>{{ t('section03.title') }}</h2>
@@ -115,13 +115,13 @@
   <!-- Section 4 (Mint Schedule) -->
   <section id="section04" class="fade-in-section" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>
       <!-- Title and Button -->
-      <div class="flex flex-row items-center justify-between w-full md:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
+      <div class="mintSchedule flex flex-row items-center justify-between w-full md:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
           <!-- Text Content on the left -->
           <div class="text-left">
-              <h2 class="text-3xl sm:text-4xl md:text-7xl mb-2 sm:mb-4">Mint<br><span class="text-2xl sm:text-3xl md:text-6xl text-white">Schedule</span></h2>
+              <h2 class="text-3xl sm:text-4xl md:text-7xl mb-2 sm:mb-4">Mint<br><span class="schedule text-2xl sm:text-3xl md:text-6xl text-white">Schedule</span></h2>
           </div>
           <!-- Buy Button -->
-          <TheButton class="text-2xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6">Mint Now</TheButton>
+          <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>Mint Now</TheButton>
       </div>
       
       <!-- Main Parent Div (Whitelist & Public Sale) -->
@@ -130,24 +130,24 @@
         <div 
             v-for="sale in salesData" 
             :key="sale.type" 
-            class="bg-primary-color gap-4 rounded-3xl p-10 flex flex-col 
+            class="salesType bg-primary-color gap-4 rounded-3xl p-10 flex flex-col 
             lg:flex-row justify-between space-y-4 lg:space-y-0">
 
             <!-- Title, Icon, and Date Div -->
             <div>
                 <div class="flex items-center mb-2 sm:mb-4">
                     <div :class="sale.icon" text-black text-xl mr-4 md:text-2xl></div>
-                    <h2 class="text-black font-bold text-3xl sm:text-4xl md:text-4xl">{{ sale.type }}</h2>
+                    <h2 class="text-black font-bold text-3xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
                 </div>
                 <div class="date-div bg-black text-white px-2 py-1 mb-4 text-sm lg:text-lg rounded-3xl ">{{sale.date}}</div>
             </div>
 
             <!-- Countdown, Price, and Mint Div -->
             <div class="flex flex-col gap-4 h-full">
-              <p class="p-2 text-white bg-black self-center md:self-end rounded-xl mb-4 text-sm lg:text-lg">
+              <p class="salePrice p-2 text-white bg-black self-center md:self-end rounded-xl mb-4 text-sm lg:text-lg">
                 {{sale.price}} ETH
               </p> 
-              <TheCountdown class="self-center" />
+              <TheCountdown class="counter self-center" />
             </div>
         </div>
     </div>

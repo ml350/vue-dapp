@@ -13,25 +13,25 @@
     <div class="flex flex-row justify-center items-center text-center space-x-4 ">
       <!-- Days -->
       <div class="flex flex-col items-center">
-        <span class="text-black font-bold">{{ days }}</span>
+        <span class="counterSpan text-black font-bold">{{ days }}</span>
         <span>Days</span>
       </div>
 
       <!-- Hours -->
       <div class="flex flex-col items-center">
-        <span class="text-black font-bold">{{ hours }}</span>
+        <span class="counterSpan text-black font-bold">{{ hours }}</span>
         <span>Hours</span>
       </div>
 
       <!-- Minutes -->
       <div class="flex flex-col items-center">
-        <span class="text-black font-bold">{{ minutes }}</span>
+        <span class="counterSpan text-black font-bold">{{ minutes }}</span>
         <span>Min</span>
       </div>
 
       <!-- Seconds -->
       <div class="flex flex-col items-center">
-        <span class="text-black font-bold">{{ seconds }}</span>
+        <span class="counterSpan text-black font-bold">{{ seconds }}</span>
         <span>Sec</span>
       </div>
     </div>
