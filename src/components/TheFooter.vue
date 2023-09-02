@@ -37,7 +37,7 @@
       <div flex lg:flex items-center justify-between>
         <div class="lg:w-1/3">
           <a href="/">
-            <img :src="logo" w-20 lg:w-30 alt="HaHa Hyenas Logo" />
+            <img class="logo" :src="logo" w-20 lg:w-30 alt="HaHa Hyenas Logo" />
           </a>
           
           <h3 my-3 text-yellow-200 text-sm md:text-xl text-left>{{ t('footer.title') }}</h3>

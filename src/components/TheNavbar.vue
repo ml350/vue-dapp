@@ -48,13 +48,13 @@
          @click="menuOpen = !menuOpen"
 >
           <div
-          :class="`${genericHamburgerLine} ${menuOpen ? 'rotate-45 translate-y-3 opacity-50 group-hover:opacity-100' : 'opacity-50 group-hover:opacity-100'}`"
+          :class="`${genericHamburgerLine} ${menuOpen ? 'hamburgesa-line rotate-45 translate-y-3 opacity-50 group-hover:opacity-100' : 'hamburgesa-line opacity-50 group-hover:opacity-100'}`"
           />
           <div
-            :class="`${genericHamburgerLine} ${menuOpen ? 'opacity-0' : 'opacity-50 group-hover:opacity-100'}`"
+            :class="`${genericHamburgerLine} ${menuOpen ? 'hamburgesa-line opacity-0' : 'hamburgesa-line opacity-50 group-hover:opacity-100'}`"
           />
           <div
-            :class="`${genericHamburgerLine} ${menuOpen ? '-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100' : 'opacity-50 group-hover:opacity-100'}`"
+            :class="`${genericHamburgerLine} ${menuOpen ? 'hamburgesa-line -rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100' : 'hamburgesa-line opacity-50 group-hover:opacity-100'}`"
           />
       </button>
     </div>  
