@@ -6,10 +6,10 @@
     import { ref, watch } from 'vue';  
 
     // Importing images
-    const nft1 = 'src/assets/hyena1.jpg';
-    const nft2 = 'src/assets/hyena2.jpg';
-    const nft3 = 'src/assets/hyena3.jpg';
-    const nft4 = 'src/assets/hyena4.jpg';
+    import nft1 from '~/assets/hyena1.jpg';
+    import nft2 from '~/assets/hyena2.jpg';
+    import nft3 from '~/assets/hyena3.jpg';
+    import nft4 from '~/assets/hyena4.jpg';
 
     const slides = [
         { image: nft1, title: '#Hyena3047', rarity: 'RARE', bg: 'bg-cyan-500'},

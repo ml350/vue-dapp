@@ -1,12 +1,13 @@
 <script setup lang="ts">
-  /*global useI18n, Ref, ref*/
+  /*global useI18n, Ref, ref, computed, isDark*/
   /*eslint no-undef: "error"*/
   const { t } = useI18n()
   const menuOpen: Ref<boolean> = ref(false);
-  const logo = 'src/assets/logo.png' 
-
+  import Logo from '~/assets/logo.png' 
+  import darkLogo from '~/assets/logo2.png' 
+  const logo = computed(() => (isDark.value ? Logo : darkLogo))
     // Scroll to section function
-    const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({

@@ -1,11 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-  /*global useI18n*/
+  /*global useI18n, computed, isDark*/
   /*eslint no-undef: "error"*/
-  import { ref } from 'vue';
-  const roadmap = 'src/assets/roadmap.png' 
+  import { ref } from 'vue'; 
+  import roadmap from '~/assets/roadmap.png'
+  import darkRoadmap from '~/assets/darkRoadmap.png' 
   const { t, rt  } = useI18n() 
-
+  const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
   const section04Data = {
     wldate: 'TBA',
     weprice: '.07',
@@ -100,7 +101,7 @@
   <!-- Section 3 (Roadmap) -->
   <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-1/3" text-left mb-4>
-      <img class="roadmap" :src="roadmap" alt="Roadmap"/>
+      <img class="roadmap" :src="Roadmap" alt="Roadmap"/>
     </div>
     <div class="lg:w-1/3" text-left whitespace-pre-line>
       <h2 mb-4 text-3xl lg:text-6xl xl:text:6xl>{{ t('section03.title') }}</h2>

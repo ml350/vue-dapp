@@ -28,20 +28,26 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+  /*global onMounted*/
+  /*eslint no-undef: "error"*/
+  import { ref } from 'vue';
+  import hyenaScene from '~/assets/hyenaIntro.png';
+  
+  const lightOpacity = ref(0);
 
-const hyenaScene = 'src/assets/hyenaIntro.png';
-const lightOpacity = ref(0);
+  const handleMouseEnter = () => {
+    lightOpacity.value = 1;
+  };
 
-const handleMouseEnter = () => {
-  lightOpacity.value = 1;
-};
+  const handleMouseLeave = () => {
+    lightOpacity.value = 0;
+  };
 
-const handleMouseLeave = () => {
-  lightOpacity.value = 0;
-};
+  let isDesktop = ref(false);
 
-const isDesktop = computed(() => window.innerWidth >= 768); 
+  onMounted(() => {
+      isDesktop.value = window.innerWidth >= 768;
+  }); 
 </script>
 
 <route lang="yaml">

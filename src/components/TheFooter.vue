@@ -1,11 +1,13 @@
 <script setup lang="ts">
-  /*global useI18n*/
+  /*global useI18n, computed, isDark*/
   /*eslint no-undef: "error"*/
   import { availableLocales, loadLanguageAsync } from '~/modules/i18n'
 
   const { t, locale } = useI18n()
-  const logo = 'src/assets/logo.png'
-  const hyena = 'src/assets/hyenaTsp.png'
+  import Logo from '~/assets/logo.png' 
+  import darkLogo from '~/assets/logo2.png' 
+  import hyena from '~/assets/hyenaTsp.png'
+  const logo = computed(() => (isDark.value ? Logo : darkLogo))
   
   async function toggleLocales() {
     // change to some real logic

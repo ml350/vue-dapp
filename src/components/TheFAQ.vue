@@ -1,9 +1,10 @@
 <script setup lang="ts">
-    /*global*/
-    /*eslint no-undef: "error"*/ 
+    /*global computed, isDark*/
+    /*eslint no-undef: "error"*/  
     import { ref } from 'vue'
-
-    const banner = 'src/assets/faq.png'
+    import Banner from '~/assets/faq.png'
+    import darkBanner from '~/assets/faqDark.png'
+    const banner = computed(() => (isDark.value ? Banner : darkBanner ))
 
     const faqList = ref([
         { id: 1, question: "What is HaHa Hyenas?",
