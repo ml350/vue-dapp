@@ -12,13 +12,13 @@
         v-if="isDesktop"
         @mouseenter="handleMouseEnter"
         @mouseleave="handleMouseLeave"
-        class="enter-button self-end mb-9"
+        class="enter-button self-end mb-2"
       >
       <RouterLink to="/home">Enter</RouterLink>
       </TheButton>
       <TheButton
         v-else
-        class="enter-button self-end mb-8"
+        class="enter-button self-end mb-2"
         to="/home"
       >
       <RouterLink to="/home">Enter</RouterLink>

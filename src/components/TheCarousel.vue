@@ -46,7 +46,7 @@
         <carousel :wrap-around="false" :items-to-show="1" @slide="updateActiveSlide" >
             <slide v-for="(slide, index) in slides" :key="index">
                 <!-- NFT Name Title -->
-                <h3 class="text-white mb-4 text-center text-2xl md:text-3xl">{{ slide.title }}</h3>
+                <!-- <h3 class="text-white mb-4 text-center text-2xl md:text-3xl">{{ slide.title }}</h3> -->
                 <img class="w-2/4 mx-auto rounded-md h-auto" :src="slide.image" :alt="'Image ' + slide.title">
                 <!-- Display the rarity -->
                 <div :class="['text-center text-black text-sm mt-4 mx-auto cursor-pointer rounded-full px-2 py-2 w-1/2', slide.bg, 'border-2 border-gradient']">
