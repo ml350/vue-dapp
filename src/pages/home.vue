@@ -9,9 +9,9 @@
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
   const section04Data = {
     wldate: 'TBA',
-    weprice: '.07',
+    weprice: 'TBA',
     pbdate: 'TBA',
-    pbprice: '.08'
+    pbprice: ' TBA'
   };
 
   // Define the salesData
@@ -32,9 +32,9 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('fade-in');
-          entry.target.classList.remove('fade-out'); // Remove fade-out class if present
+          entry.target.classList.remove('fade-out');
         } else {
-          entry.target.classList.remove('fade-in'); // Remove fade-in class if present
+          entry.target.classList.remove('fade-in');
           entry.target.classList.add('fade-out');
         }
       });
@@ -76,7 +76,7 @@
       </TheButton> 
     </div> 
     <!-- Updated Carousel Styling -->
-    <div class="lg:w-3/8 md:w-1/3">
+    <div class="lg:w-3/8 md:w-1/2 w-1/1">
       <TheCarousel />
     </div>
   </section>
@@ -98,35 +98,37 @@
 
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
-  <!-- Section 3 (Roadmap) -->
-  <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
-    <div class="lg:w-1/3" text-left mb-4>
-      <img class="roadmap" :src="Roadmap" alt="Roadmap"/>
-    </div>
-    <div class="lg:w-1/3" text-left whitespace-pre-line>
-      <h2 mb-4 text-3xl lg:text-6xl xl:text:6xl>{{ t('section03.title') }}</h2>
-      <p mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
-      <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>
-       {{ t('section03.button') }}</TheButton>
-    </div>
-  </section> 
+
+      <!-- Section 03 (Roadmap) -->
+      <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4>
+      <div class="lg:w-1/3" text-left mb-4>
+        <img class="roadmap" :src="Roadmap" alt="Roadmap"/>
+      </div>
+      <div class="lg:w-1/3 text-left whitespace-pre-line my-4">
+        <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>{{ t('section03.title') }}</h2>
+        <p mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
+        <TheButton text-xs sm:text-sm md:text-base lg:text-lg>
+          {{ t('section03.button') }}
+        </TheButton>
+      </div>
+    </section>
 
    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
   
   <!-- Section 4 (Mint Schedule) -->
   <section id="section04" class="fade-in-section" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>
       <!-- Title and Button -->
-      <div class="mintSchedule flex flex-row items-center justify-between w-full md:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
+      <div class="mintSchedule flex flex-row items-center justify-between w-full lg:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
           <!-- Text Content on the left -->
           <div class="text-left">
-              <h2 class="text-3xl sm:text-4xl md:text-7xl mb-2 sm:mb-4">Mint<br><span class="schedule text-2xl sm:text-3xl md:text-6xl text-white">Schedule</span></h2>
+              <h2 class="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">Mint<br><span class="schedule text-2xl sm:text-3xl md:text-5xl text-white">Schedule</span></h2>
           </div>
           <!-- Buy Button -->
-          <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>Mint Now</TheButton>
+          <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>Mint</TheButton>
       </div>
       
       <!-- Main Parent Div (Whitelist & Public Sale) -->
-      <div class="w-full lg:w-3/8 space-y-10">
+      <div class="w-full xl:w-3/8 md:w-full space-y-10">
         <!-- Iterating over salesData -->
         <div 
             v-for="sale in salesData" 
@@ -138,15 +140,15 @@
             <div>
                 <div class="flex items-center mb-2 sm:mb-4">
                     <div :class="sale.icon" text-black text-xl mr-4 md:text-2xl></div>
-                    <h2 class="text-black font-bold text-3xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
+                    <h2 class="text-black font-bold text-2xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
                 </div>
                 <div class="date-div bg-black text-white px-2 py-1 mb-4 text-sm lg:text-lg rounded-3xl ">{{sale.date}}</div>
             </div>
 
             <!-- Countdown, Price, and Mint Div -->
             <div class="flex flex-col gap-4 h-full">
-              <p class="salePrice p-2 text-white bg-black self-center md:self-end rounded-xl mb-4 text-sm lg:text-lg">
-                {{sale.price}} ETH
+              <p class="salePrice p-2 text-white bg-black self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">
+                Price:{{sale.price}}
               </p> 
               <TheCountdown class="counter self-center" />
             </div>

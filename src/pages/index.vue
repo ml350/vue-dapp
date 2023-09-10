@@ -1,28 +1,47 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="intro-container" fixed mb-8>
-    <img
-      :src="hyenaScene"
-      alt="NFT Intro Image"
-      class="intro-image"
-    />
-    <div class="light-transition" :style="{ opacity: lightOpacity }"></div>
-    <div class="flex items-center justify-center h-sm absolute inset-0 md:h-full">
-      <TheButton
-        v-if="isDesktop"
-        @mouseenter="handleMouseEnter"
-        @mouseleave="handleMouseLeave"
-        class="enter-button self-end mb-2"
-      >
-      <RouterLink to="/home">Enter</RouterLink>
-      </TheButton>
-      <TheButton
-        v-else
-        class="enter-button self-end mb-2"
-        to="/home"
-      >
-      <RouterLink to="/home">Enter</RouterLink>
-      </TheButton>
+    <!-- Mobile Version -->
+    <section class="md:hidden text-center mt-8">
+      <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" />
+      <img
+        :src="hyenaScene"
+        alt="NFT Intro Image"
+        class="intro-image mx-auto mb-8"
+      />
+      <div class="bg-fuchsia-950 text-white p-4 h-full flex flex-col justify-between">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl mb-2 text-center">
+          Welcome to the<br />HaHa Hyenas<br />Comedy Club
+        </h2>
+        <TheButton self-center md:self-start mt-4>
+          <RouterLink to="/home">Enter</RouterLink>
+        </TheButton>
+      </div>
+    </section>
+
+    <!-- Desktop Version -->
+    <div class="hidden md:block">
+      <div class="relative">
+        <img
+          :src="hyenaScene"
+          alt="NFT Intro Image"
+          class="intro-image w-full"
+        />
+        <div
+          class="light-transition absolute inset-0"
+          :style="{ opacity: lightOpacity }"
+        ></div>
+        <div class="absolute bottom-0 left-0 right-0 text-center lg:mb-20 md:mb-10">
+          <TheButton
+            v-if="isDesktop"
+            @mouseenter="handleMouseEnter"
+            @mouseleave="handleMouseLeave"
+            class="enter-button"
+          >
+            <RouterLink to="/home">Enter</RouterLink>
+          </TheButton>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +51,7 @@
   /*eslint no-undef: "error"*/
   import { ref } from 'vue';
   import hyenaScene from '~/assets/hyenaIntro.png';
+  import logo from '~/assets/logo.png';
   
   const lightOpacity = ref(0);
 
@@ -43,11 +63,11 @@
     lightOpacity.value = 0;
   };
 
-  let isDesktop = ref(false);
+  const isDesktop = ref(false);
 
   onMounted(() => {
-      isDesktop.value = window.innerWidth >= 768;
-  }); 
+    isDesktop.value = window.innerWidth >= 768;
+  });
 </script>
 
 <route lang="yaml">

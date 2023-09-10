@@ -85,20 +85,3 @@
     </div>
   </template>
   
-<style>
-  .faq-answer-container {
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-    max-height: 0;
-  }
-
-  .faq-answer-container.open {
-      max-height: 1000px; /* This should be greater than the actual height */
-  }
-
-  #section01 {
-    .carousel__slide {
-        display: block;
-      }
-  }
-</style>
