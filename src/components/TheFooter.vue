@@ -24,6 +24,11 @@
     { id: 3, action: toggleLocales, titleKey: 'button.toggle_langs', icon: 'i-carbon-language', label: 'Languages' }
   ]
 
+   // Computed property to filter out the "Languages" link
+   const filteredLinks = computed(() => {
+    return footerLinks.filter(link => link.label !== 'Languages');
+  });
+
   // Social Media Icons
   const socialItems = [
     { route: '/', icon: 'i-carbon-logo-instagram'},
@@ -50,7 +55,7 @@
         </div>
 
         <div class="lg:w-1/3">
-          <ul items-center mb-6 text-sm font-medium>
+          <ul items-center text-sm font-medium>
             <!-- Social Icons -->
             <div flex justify-end gap-2>
               <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex-row gap-1>
@@ -59,7 +64,7 @@
             </div>
             <h3 my-3 text-yellow-200 text-sm md:text-xl text-right>{{ t('footer.title2') }}</h3>
 
-            <li v-for="link in footerLinks" :key="link.id">
+            <li v-for="link in filteredLinks" :key="link.id">
               <RouterLink v-if="link.route" text-xs lg:text-xl justify-end gap-2 mb-1 hover:text-pink-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
                 <div :class="link.icon" hover:text-pink-600 /> {{ link.label }}
               </RouterLink>
