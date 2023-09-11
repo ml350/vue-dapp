@@ -24,9 +24,8 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'Montserrat',
-        serif: 'Montserrat Serif Display',
-        mono: 'Montserrat Mono',
+        sans: 'Montserrat',             // Setting Montserrat as the sans font
+        'gochi-hand': 'Gochi Hand',    // Introducing a custom label for Gochi Hand font
       },
     }),
   ],

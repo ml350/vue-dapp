@@ -11,7 +11,7 @@
 <template>
   <ClientOnly>
     <vue-countdown mb-4 text-xl lg:text-2xl xl:text-2xl text-black font-bold :time="time" :interval="100" v-slot="{ days, hours, minutes, seconds, }">
-      <div class="flex flex-row justify-center items-center text-center space-x-4 ">
+      <div class="flex flex-row lg:text-xl justify-center items-center text-center space-x-4 ">
         <!-- Days -->
         <div class="flex flex-col items-center">
           <span class="counterSpan text-black font-bold">{{ days }}</span>

@@ -21,7 +21,7 @@
 
     <!-- Desktop Version -->
     <div class="hidden md:block">
-      <div class="relative">
+      <div>
         <img
           :src="hyenaScene"
           alt="NFT Intro Image"
@@ -30,18 +30,20 @@
         <div
           class="light-transition absolute inset-0"
           :style="{ opacity: lightOpacity }"
-        ></div>
-        <div class="absolute bottom-0 left-0 right-0 text-center lg:mb-20 md:mb-10">
+        ></div> 
+      </div>
+      <div class="relative md:bottom-20 lg:bottom-49 text-center lg:mb-20 md:mb-10">
+        
+        <RouterLink to="/home">
           <TheButton
             v-if="isDesktop"
             @mouseenter="handleMouseEnter"
             @mouseleave="handleMouseLeave"
-            class="enter-button"
-          >
-            <RouterLink to="/home">Enter</RouterLink>
+            class="enter-button">
+            Enter
           </TheButton>
+        </RouterLink>
         </div>
-      </div>
     </div>
   </div>
 </template>
