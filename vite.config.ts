@@ -131,7 +131,7 @@ export default defineConfig({
     }),
 
     // https://github.com/feat-agency/vite-plugin-webfont-dl
-    WebfontDownload(),
+    WebfontDownload(['https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@300;400&display=swap']),
 
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
