@@ -41,7 +41,7 @@
 </script>
 
 <template>
-    <div class="rounded-md border-3 border-white p-4 bg-opacity-40 bg-gradient-to-br from-amber-200 to-pink-600 backdrop-blur-xl"> 
+    <div class="rounded-md border-3 border-white p-4 bg-opacity-40 bg-gradient-to-br from-white-900 to-red-600 backdrop-blur-xl"> 
         <!-- Carousel Component -->
         <carousel :wrap-around="false" :items-to-show="1" @slide="updateActiveSlide" >
             <slide v-for="(slide, index) in slides" :key="index">

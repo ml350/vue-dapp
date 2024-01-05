@@ -9,8 +9,8 @@
         alt="NFT Intro Image"
         class="intro-image mx-auto mb-8"
       />
-      <div class="bg-fuchsia-950 text-white p-4 h-full flex flex-col justify-between">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl mb-2 text-center">
+      <div class="bg-red-950  p-4 h-full flex flex-col justify-between">
+        <h2 class="text-2xl text-white sm:text-3xl md:text-4xl mb-2 text-center">
           Welcome to the<br />HaHa Hyenas<br />Comedy Club
         </h2>
         <TheButton self-center md:self-start mt-4>
