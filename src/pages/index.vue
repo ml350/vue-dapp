@@ -9,7 +9,7 @@
         alt="NFT Intro Image"
         class="intro-image mx-auto mb-8"
       />
-      <div class="bg-red-950  p-4 h-full flex flex-col justify-between">
+      <div class="  p-4 h-full flex flex-col justify-between">
         <h2 class="text-2xl text-white sm:text-3xl md:text-4xl mb-2 text-center">
           Welcome to the<br />HaHa Hyenas<br />Comedy Club
         </h2>
@@ -21,19 +21,20 @@
 
     <!-- Desktop Version -->
     <div class="hidden md:block">
+      <div class="  p-4 h-full flex flex-col justify-between">
+        <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" />
+        <h2 class="text-2xl text-white sm:text-3xl md:text-4xl mb-2 text-center">
+          Welcome to the HaHa Hyenas<br />Comedy Club
+        </h2>
+      </div>
       <div>
         <img
           :src="hyenaScene"
           alt="NFT Intro Image"
           class="intro-image w-full"
         />
-        <div
-          class="light-transition absolute inset-0"
-          :style="{ opacity: lightOpacity }"
-        ></div> 
       </div>
-      <div class="relative md:bottom-20 lg:bottom-49 text-center lg:mb-20 md:mb-10">
-        
+      <div class="mt-4 flex items-center justify-center  md:bottom-20 lg:bottom-49 text-center lg:mb-20 md:mb-10">
         <RouterLink to="/home">
           <TheButton
             v-if="isDesktop"
@@ -43,7 +44,7 @@
             Enter
           </TheButton>
         </RouterLink>
-        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -52,7 +53,7 @@
   /*global onMounted*/
   /*eslint no-undef: "error"*/
   import { ref } from 'vue';
-  import hyenaScene from '~/assets/hyenaIntro.png';
+  import hyenaScene from '~/assets/hyenaIntro2.png';
   import logo from '~/assets/logo.png';
   
   const lightOpacity = ref(0);
