@@ -47,7 +47,7 @@
             <img class="logo" :src="logo" w-20 lg:w-30 alt="HaHa Hyenas Logo" />
           </a>
           
-          <h3 my-3 text-yellow-200 text-sm md:text-xl text-left>{{ t('footer.title') }}</h3>
+          <h3 my-3 text-red-600 text-sm md:text-xl text-left>{{ t('footer.title') }}</h3>
         </div>
 
         <div class="md:w-1/3 hidden sm:block">
@@ -59,16 +59,16 @@
             <!-- Social Icons -->
             <div flex justify-end gap-2>
               <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex-row gap-1>
-                <div :class='item.icon' text-sm md:text-2xl hover:text-pink-600 > </div>
+                <div :class='item.icon' text-sm md:text-2xl hover:text-red-600 > </div>
               </RouterLink>
             </div>
-            <h3 my-3 text-yellow-200 text-sm md:text-xl text-right>{{ t('footer.title2') }}</h3>
+            <h3 my-3 text-red-600 text-sm md:text-xl text-right>{{ t('footer.title2') }}</h3>
 
             <li v-for="link in filteredLinks" :key="link.id">
-              <RouterLink v-if="link.route" text-xs lg:text-xl justify-end gap-2 mb-1 hover:text-pink-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
-                <div :class="link.icon" hover:text-pink-600 /> {{ link.label }}
+              <RouterLink v-if="link.route" text-xs lg:text-xl justify-end gap-2 mb-1 hover:text-red-600 flex flex-wrap :to="link.route" :title="t(link.titleKey)">
+                <div :class="link.icon" hover:text-red-600 /> {{ link.label }}
               </RouterLink>
-              <a v-else flex flex-wrap justify-end text-xs lg:text-xl hover:text-pink-600 :title="t(link.titleKey)" @click="link.action">
+              <a v-else flex flex-wrap justify-end text-xs lg:text-xl hover:text-red-600 :title="t(link.titleKey)" @click="link.action">
                 <div :class="link.icon" /> {{ link.label }}
               </a>
             </li>

@@ -64,12 +64,12 @@
       <!-- Menu Items -->
       <ul lg:flex gap-8 py-1 items-center >
         <li v-for="item in menuItems" :key="item.section" text-left py-1 >
-          <a href="#" class="relative transition ease-in-out md:hover:text-pink-600 group" @click="scrollToSection(item.section)">
+          <a href="#" class="relative transition ease-in-out md:hover:text-red-600 group" @click="scrollToSection(item.section)">
             <div flex gap-1 items-center> 
               <div :class="item.icon"></div>
               {{ t(item.label) }} 
             </div>
-            <span class="absolute inset-x-0 bottom-0 h-[2px] bg-pink-600 transform scale-x-0 md:group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
+            <span class="absolute inset-x-0 bottom-0 h-[2px] bg-red-600 transform scale-x-0 md:group-hover:scale-x-100 transition-transform ease-in-out duration-300"></span>
           </a>
         </li>
       </ul>
@@ -78,12 +78,12 @@
 
       <!-- Social Icons -->
       <RouterLink v-for="item in socialItems" :key="item.route" :to="item.route" flex md:justify-end gap-1 py-1 >
-        <div :class='item.icon' text-2xl md:hover:text-pink-600 > </div>
+        <div :class='item.icon' text-2xl md:hover:text-red-600 > </div>
         <span md:hidden>{{ item.label }}</span>
       </RouterLink>
 
       <button flex gap-1 py-1 :title="t('button.toggle_dark')" @click="toggleDark()">
-        <div i="carbon-sun dark:carbon-moon" class="text-2xl md:hover:text-pink-600"/> 
+        <div i="carbon-sun dark:carbon-moon" class="text-2xl md:hover:text-red-600"/> 
         <span md:hidden >{{ t('button.toggle_dark') }}</span>
       </button>  
       

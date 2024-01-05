@@ -1,7 +1,7 @@
 <script setup lang="ts">
   /*global useI18n*/
   /*eslint no-undef: "error"*/ 
-  import banner from '~/assets/banner1.png'
+  import banner from '~/assets/banner.jpg'
   const { t } = useI18n()
 
   function scrollToSection(id : string) {

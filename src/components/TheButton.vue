@@ -1,7 +1,7 @@
 <template>
   <div class="button-container relative inline-block">
-    <button disabled class="custom-btn relative overflow-hidden text-black py-2 px-8 font-bold rounded-full">
-      <div class="content-wrapper relative z-10">
+    <button class="custom-btn relative overflow-hidden text-black py-2 px-8 font-bold rounded-full">
+      <div class="content-wrapper text-white relative z-10">
           <slot></slot> 
       </div>
     </button>
