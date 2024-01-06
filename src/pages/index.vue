@@ -22,10 +22,9 @@
     <!-- Desktop Version -->
     <div class="hidden md:block">
       <div class="  p-4 h-full flex flex-col justify-between">
-        <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" />
-        <h2 class="text-2xl text-white sm:text-3xl md:text-4xl mb-2 text-center">
-          Welcome to the HaHa Hyenas<br />Comedy Club
-        </h2>
+        <!-- <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" /> -->
+        
+        <video :src="clip" alt="HaHa Hyenas Clip" loop autoplay></video>
       </div>
       <div>
         <img
@@ -55,6 +54,7 @@
   import { ref } from 'vue';
   import hyenaScene from '~/assets/hyenaIntro2.png';
   import logo from '~/assets/logo.png';
+  import clip from '~/assets/hyClip.webm';
   
   const lightOpacity = ref(0);
 

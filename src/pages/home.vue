@@ -88,8 +88,8 @@
     <div class="lg:w-3/4" text-left whitespace-pre-line>
         <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl>{{ t('section02.title') }}</h2>
         <!-- Using v-html to render HTML content -->
-        <p mb-4 text-sm lg:text-lg>{{t("section02.desc")}}</p>
-        <p mb-4 text-sm lg:text-lg>{{t("section02.desc2")}}</p>
+        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc")}}</p>
+        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc2")}}</p>
     </div>
     <div class="lg:w-1/4">
       <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>{{ t('section02.button') }}</TheButton>
@@ -106,7 +106,7 @@
       </div>
       <div class="lg:w-1/3 text-left whitespace-pre-line my-4">
         <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>{{ t('section03.title') }}</h2>
-        <p mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
+        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
         <TheButton text-xs sm:text-sm md:text-base lg:text-lg>
           {{ t('section03.button') }}
         </TheButton>
@@ -118,7 +118,7 @@
   <!-- Section 4 (Mint Schedule) -->
   <section id="section04" class="fade-in-section" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>
       <!-- Title and Button -->
-      <div class="mintSchedule flex flex-row items-center justify-between w-full lg:w-3/8 p-4 border-l rounded-r-3xl border-t border-b border-r border-white"> 
+      <div class="mintSchedule bg-stone-900 text-white border-1 border-red-600 flex flex-row items-center justify-between w-full lg:w-3/8 p-4  border-t border-b border-r border-white"> 
           <!-- Text Content on the left -->
           <div class="text-left">
               <h2 class="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">Mint<br><span class="schedule text-2xl sm:text-3xl md:text-5xl text-white">Schedule</span></h2>
@@ -133,24 +133,24 @@
         <div 
             v-for="sale in salesData" 
             :key="sale.type" 
-            class="salesType bg-primary-color gap-4 rounded-3xl p-10 flex flex-col 
+            class="salesType bg-stone-950 border-2 border-red-600 gap-4 rounded-3xl p-10 flex flex-col 
             lg:flex-row justify-between space-y-4 lg:space-y-0">
 
             <!-- Title, Icon, and Date Div -->
             <div>
                 <div class="flex items-center mb-2 sm:mb-4">
-                    <div :class="sale.icon" text-black text-xl mr-4 md:text-2xl></div>
-                    <h2 class="text-black font-bold text-2xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
+                    <div :class="sale.icon" text-white text-xl mr-4 md:text-2xl></div>
+                    <h2 class=" text-stroke-white-600 font-bold text-2xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
                 </div>
-                <div class="date-div bg-black text-white px-2 py-1 mb-4 text-sm lg:text-lg rounded-3xl ">{{sale.date}}</div>
+                <div class="date-div bg-stone-900 text-white border-1 border-red-600 px-2 py-1 mb-4 text-sm lg:text-lg  ">Date: {{sale.date}}</div>
             </div>
 
             <!-- Countdown, Price, and Mint Div -->
             <div class="flex flex-col gap-4 h-full">
-              <p class="salePrice p-2 text-white bg-black self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">
+              <p class="salePrice p-2 bg-stone-900 text-white border-1 border-red-600 self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">
                 Price:{{sale.price}}
               </p> 
-              <TheCountdown class="counter self-center" />
+              <TheCountdown class="counter text-white self-center" />
             </div>
         </div>
     </div>
