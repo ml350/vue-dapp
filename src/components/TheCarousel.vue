@@ -13,9 +13,9 @@
 
     const slides = [
         { image: nft1, title: '#Hyena3047', rarity: 'RARE', bg: 'bg-cyan-500'},
-        { image: nft2, title: '#Hyena3033', rarity: 'LEGENDARY', bg: 'bg-fuchsia-600' },
+        { image: nft2, title: '#Hyena3033', rarity: 'LEGENDARY', bg: 'bg-yellow-200' },
         { image: nft3, title: '#Hyena3036', rarity: 'COMMON', bg: 'bg-slate-400' },
-        { image: nft4, title: '#Hyena3088', rarity: 'COMMON', bg: 'bg-slate-400' }
+        { image: nft4, title: '#Hyena3088', rarity: 'EPIC', bg: 'bg-pink-7' }
     ];
 
     const activeSlide = ref(0); // Will hold the index of the current slide
@@ -49,7 +49,7 @@
                 <!-- <h3 class="text-white mb-4 text-center text-2xl md:text-3xl">{{ slide.title }}</h3> -->
                 <img class="mx-auto rounded-md h-auto" :src="slide.image" :alt="'Image ' + slide.title">
                 <!-- Display the rarity -->
-                <div :class="['text-center text-black text-sm mt-4 mx-auto cursor-pointer rounded-full px-2 py-2 w-1/2', slide.bg, 'border-2 border-gradient']">
+                <div :class="['text-center text-black text-sm mt-4 mx-auto cursor-pointer px-2 py-2 w-1/2', slide.bg, 'border-2 border-white']">
                     {{ slide.rarity }}
                 </div>
 
