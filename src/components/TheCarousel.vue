@@ -41,7 +41,7 @@
 </script>
 
 <template>
-    <div class="rounded-md border-3 border-white p-4 bg-opacity-40 bg-gradient-to-br from-white-900 to-red-600 backdrop-blur-xl"> 
+    <div class="rounded-md mx-3 p-4 bg-opacity-40 bg-gradient-to-br from-white-900 to-red-600 backdrop-blur-xl"> 
         <!-- Carousel Component -->
         <carousel :wrap-around="false" :items-to-show="1" @slide="updateActiveSlide" >
             <slide v-for="(slide, index) in slides" :key="index">
@@ -49,7 +49,7 @@
                 <!-- <h3 class="text-white mb-4 text-center text-2xl md:text-3xl">{{ slide.title }}</h3> -->
                 <img class="mx-auto rounded-md h-auto" :src="slide.image" :alt="'Image ' + slide.title">
                 <!-- Display the rarity -->
-                <div :class="['text-center text-black text-sm mt-4 mx-auto cursor-pointer px-2 py-2 w-1/2', slide.bg, 'border-2 border-white']">
+                <div :class="['rounded-md text-center text-black text-sm mt-4 mx-auto cursor-pointer px-2 py-2 w-1/2', slide.bg]">
                     {{ slide.rarity }}
                 </div>
 
