@@ -4,6 +4,7 @@
   /*eslint no-undef: "error"*/
   import { ref } from 'vue'; 
   import roadmap from '~/assets/roadmap.png'
+  import hyenasnew from '~/assets/4hyenass.png'
   import darkRoadmap from '~/assets/darkRoadmap.png' 
   const { t, rt  } = useI18n() 
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
@@ -75,21 +76,25 @@
          {{t("intro.button")}}
       </TheButton> 
     </div> 
-    <!-- Updated Carousel Styling -->
     <div class="lg:w-3/8 md:w-1/2 w-1/1">
       <TheCarousel />
     </div>
   </section>
+  
+  <section class="fade-in-section">
+    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+    <img :src="hyenasnew" class="lg:w-xxl"/>
+    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
+  </section>
 
-  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 2 (Distribution) -->
   <section id="section02" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 md:flex md:justify-between md:items-center>
     <div class="lg:w-3/4" text-left whitespace-pre-line>
         <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl>{{ t('section02.title') }}</h2>
         <!-- Using v-html to render HTML content -->
-        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc")}}</p>
-        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc2")}}</p>
+        <p class="dis" bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc")}}</p>
+        <p class="dis" bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{t("section02.desc2")}}</p>
     </div>
     <div class="lg:w-1/4">
       <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>{{ t('section02.button') }}</TheButton>
@@ -106,7 +111,7 @@
       </div>
       <div class="lg:w-1/3 text-left whitespace-pre-line my-4">
         <h2 mb-4 text-3xl lg:text-6xl xl:text-6xl>{{ t('section03.title') }}</h2>
-        <p bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
+        <p class="dis" bg-stone-900 text-white border-1 border-red-600 p-4 mb-4 text-sm lg:text-lg>{{ t('section03.desc') }}</p>
         <TheButton text-xs sm:text-sm md:text-base lg:text-lg>
           {{ t('section03.button') }}
         </TheButton>
@@ -118,7 +123,7 @@
   <!-- Section 4 (Mint Schedule) -->
   <section id="section04" class="fade-in-section" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>
       <!-- Title and Button -->
-      <div class="mintSchedule bg-stone-900 text-white border-1 border-red-600 flex flex-row items-center justify-between w-full lg:w-3/8 p-4  border-t border-b border-r border-white"> 
+      <div class="mintSchedule  text-white border-1 border-red-600 flex flex-row items-center justify-between w-full lg:w-3/8 p-4  border-t border-b border-r border-white"> 
           <!-- Text Content on the left -->
           <div class="text-left">
               <h2 class="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">Mint<br><span class="schedule text-2xl sm:text-3xl md:text-5xl text-white">Schedule</span></h2>

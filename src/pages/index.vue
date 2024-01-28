@@ -23,7 +23,6 @@
     <div class="hidden md:block">
       <div class="  p-4 h-full flex flex-col justify-between">
         <!-- <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" /> -->
-        
         <video :src="clip" alt="HaHa Hyenas Clip" loop autoplay></video>
       </div>
       <div>
@@ -52,7 +51,7 @@
   /*global onMounted*/
   /*eslint no-undef: "error"*/
   import { ref } from 'vue';
-  import hyenaScene from '~/assets/hyenaIntro2.png';
+  import hyenaScene from '~/assets/banner.jpg';
   import logo from '~/assets/logo.png';
   import clip from '~/assets/hyClip.webm';
   
