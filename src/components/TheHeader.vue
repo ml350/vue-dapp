@@ -15,7 +15,7 @@
 <template>
   <div relative mb-20 mt-20 flex flex-col items-center justify-center py-5 mt-5 md:mb-10>
     <div text-white p-4>
-      <h1 class="text-red-600 text-3xl px-8 mb-10 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">{{ t('welcome.heading') }}</h1>
+      <h1 class="text-red-600 text-3xl px-8 mb-5 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">{{ t('welcome.heading') }}</h1>
       <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-20 lg:mb-10">{{ t('welcome.paragraph') }}</p>
     </div>
 
