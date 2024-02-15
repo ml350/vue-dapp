@@ -31,6 +31,8 @@ intro:
   whats-your-name: What's your name?
   button: Twitter
 not-found: Not found
+section001:
+  title: About
 section02:
   title: Distribution
   desc: |
