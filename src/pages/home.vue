@@ -9,10 +9,10 @@
   const { t, rt  } = useI18n() 
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
   const section04Data = {
-    wldate: 'TBA',
-    weprice: 'TBA',
-    pbdate: 'TBA',
-    pbprice: ' TBA'
+    wldate: '2024-04-01',
+    weprice: '0.02 ETH',
+    pbdate: '2024-04-01',
+    pbprice: '0.02 ETH'
   };
 
   // Define the salesData
@@ -119,33 +119,6 @@
   
   <!-- Section 4 (Mint Schedule) -->
   <section id="section04" class="fade-in-section" container px-8 py-8 mx-auto md:px-20> 
-    <!-- Main Parent Div (Whitelist & Public Sale) --> 
-    <div class="w-full md:w-full" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>  
-        <!-- Iterating over salesData -->
-        <div 
-            v-for="sale in salesData" 
-            :key="sale.type" 
-            class="salesType bg-stone-950 gap-4 p-10 flex flex-col 
-            lg:flex-row justify-between space-y-4 lg:space-y-0">
-
-            <!-- Title, Icon, and Date Div -->
-            <div>
-                <div class="flex items-center mb-2 sm:mb-4">
-                    <div :class="sale.icon" text-white text-xl mr-4 md:text-2xl></div>
-                    <h2 class="text-stroke-white-600 font-bold text-2xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
-                </div>
-                <div class="date-div bg-stone-900 text-white px-2 py-1 mb-4 text-sm lg:text-lg">Date: {{sale.date}}</div>
-            </div>
-
-            <!-- Countdown, Price, and Mint Div -->
-            <div class="flex flex-col gap-4 h-full">
-              <p class="salePrice p-2 bg-stone-900 text-white self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">
-                Price:{{sale.price}}
-              </p> 
-              <TheCountdown class="counter text-white self-center" />
-            </div>
-        </div> 
-    </div> 
     <!-- Title and Button -->
     <div class="mintSchedule mx-auto text-white flex flex-row justify-center w-full lg:w-3/8 p-4"> 
       <!-- Text Content on the left -->
@@ -155,17 +128,51 @@
       <!-- Buy Button -->
       <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl>Mint</TheButton>
     </div>
+
+    <p text-center text-white >{{ t('section04.para') }}</p>
+    <!-- Main Parent Div (Whitelist & Public Sale) -->  
+    <div class="w-full md:w-full" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>  
+        <!-- Iterating over salesData -->
+        <div 
+            v-for="sale in salesData" 
+            :key="sale.type" 
+            class="salesType bg-stone-950 gap-4 p-10 flex flex-col 
+            lg:flex-row justify-between space-y-4 lg:space-y-0">
+
+            <!-- Title, Icon, and Date Div -->
+            <div> 
+              <div class="date-div p-2 bg-stone-900 text-white self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">Date: {{sale.date}}</div>
+              <div class="flex items-center md:mt-8 sm:mb-4">
+                  <div :class="sale.icon" text-white text-xl mr-4 md:text-2xl></div>
+                  <h2 class="text-stroke-white-600 font-bold text-2xl sm:text-4xl md:text-4xl saleText">{{ sale.type }}</h2>
+              </div>
+            </div>
+
+            <!-- Countdown, Price, and Mint Div -->
+            <div class="flex flex-col gap-4 h-full">
+              <p class="salePrice p-2 bg-stone-900 hover:bg-emerald hover:text-black text-white self-center lg:self-end rounded-xl mb-4 text-sm lg:text-lg">
+                Price:{{sale.price}}
+              </p> 
+              <TheCountdown class="counter text-white self-center" />
+            </div>
+        </div> 
+    </div>  
   </section> 
 
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
-  <!-- Section 5 (FAQ) -->
   <section id="section05" class="fade-in-section" items-center container px-8 py-8 md:px-20 mx-auto >
-    <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl text-left>{{ t('section05.title') }}</h2>
-    <TheFAQ></TheFAQ>
-  </section>
+    <h2 mb-4 text-3xl text-center lg:text-5xl xl:text-6xl>{{ t('section05.title') }}</h2>
+    <TheTeam></TheTeam>
+  </section>   
+  
   <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
-  <TheTeam></TheTeam>
+
+  <!-- Section 6 (FAQ) -->
+  <section id="section06" class="fade-in-section" items-center container px-8 py-8 md:px-20 mx-auto >
+    <h2 mb-4 text-3xl lg:text-5xl xl:text-6xl text-left>{{ t('section06.title') }}</h2>
+    <TheFAQ></TheFAQ>
+  </section> 
 </template>
 
 <route lang="yaml">

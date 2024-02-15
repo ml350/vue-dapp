@@ -34,8 +34,7 @@
     { route: '/', icon: 'i-carbon-logo-instagram'},
     { route: '/', icon: 'i-carbon-logo-discord'},
     { route: '/', icon: 'i-carbon-logo-twitter'},
-]
-  
+  ] 
 </script>
 
 <template>
@@ -47,7 +46,7 @@
             <img class="logo" :src="logo" w-20 lg:w-30 alt="HaHa Hyenas Logo" />
           </a>
           
-          <h3 my-3 text-red-600 text-sm md:text-xl text-left>{{ t('footer.title') }}</h3>
+          <h3 my-3 text-bold text-sm md:text-xl text-left>{{ t('footer.title') }}</h3>
         </div>
 
         <div class="md:w-1/3 hidden sm:block">

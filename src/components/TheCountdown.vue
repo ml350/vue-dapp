@@ -3,9 +3,9 @@
     /*eslint no-undef: "error"*/
     import VueCountdown from '@chenfengyuan/vue-countdown';
 
-    const now = new Date();
-    const newYear = new Date(now.getFullYear() + 1, 0, 1);
-    const time = ref<number>(newYear.getTime() - now.getTime());
+    const now = new Date(); 
+    const targetDate = new Date(2024, 3, 1);
+    const time = ref<number>(targetDate.getTime() - now.getTime());
 </script>
 
 <template>

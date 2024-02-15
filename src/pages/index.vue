@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="intro-container" fixed mb-8>
+  <div class="intro-container" mb-8>
     <!-- Mobile Version -->
     <section class="md:hidden text-center mt-8">
       <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" />
@@ -9,7 +9,7 @@
         alt="NFT Intro Image"
         class="intro-image mx-auto mb-8"
       />
-      <div class="  p-4 h-full flex flex-col justify-between">
+      <div class="p-4 h-full flex flex-col justify-between">
         <h2 class="text-2xl text-white sm:text-3xl md:text-4xl mb-2 text-center">
           Welcome to the<br />HaHa Hyenas<br />Comedy Club
         </h2>
@@ -23,7 +23,7 @@
     <div class="hidden md:block">
       <div class="  p-4 h-full flex flex-col justify-between">
         <!-- <img class="logo w-15 sm:w-20 mx-auto" :src="logo" alt="HaHa Hyenas Logo" /> -->
-        <video :src="clip" alt="HaHa Hyenas Clip" loop autoplay></video>
+        <video :src="clip" alt="HaHa Hyenas Clip" loop autoplay muted></video>
       </div>
       <div>
         <img
