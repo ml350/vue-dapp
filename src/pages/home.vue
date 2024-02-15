@@ -3,8 +3,7 @@
   /*global useI18n, computed, isDark*/
   /*eslint no-undef: "error"*/
   import { ref } from 'vue'; 
-  import roadmap from '~/assets/roadmap.png'
-  import hyenasnew from '~/assets/4hyenass.png'
+  import roadmap from '~/assets/roadmap.png' 
   import darkRoadmap from '~/assets/darkRoadmap.png' 
   const { t, rt  } = useI18n() 
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
@@ -79,14 +78,9 @@
     <div class="lg:w-3/8 md:w-1/2 w-1/1">
       <TheCarousel />
     </div>
-  </section>
-  
-  <section class="fade-in-section">
-    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
-    <img :src="hyenasnew" class="lg:w-xxl"/>
-    <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
-  </section>
+  </section>  
 
+  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 2 (Distribution) -->
   <section id="section02" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 > 
@@ -100,6 +94,8 @@
       <TheButton text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6>{{ t('section02.button') }}</TheButton>
     </div> -->
   </section>
+
+  <hr my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 />
 
   <!-- Section 03 (Roadmap) -->
   <section id="section03" class="fade-in-section" container px-8 py-8 mx-auto md:px-20 flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4>
