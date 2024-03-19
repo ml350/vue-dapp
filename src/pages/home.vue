@@ -8,9 +8,9 @@
   const { t, rt  } = useI18n() 
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
   const section04Data = {
-    wldate: '2024-04-01',
-    weprice: '0.02 ETH',
-    pbdate: '2024-04-01',
+    wldate: '2024-04-20',
+    weprice: '0.015 ETH',
+    pbdate: '2024-04-20',
     pbprice: '0.02 ETH'
   };
 

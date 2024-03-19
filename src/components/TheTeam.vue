@@ -25,35 +25,38 @@
 </template>
 
 <script setup>
-  import hyenaImage from "~/assets/hyena3.jpg";
-  
-  const team = [
-    {
-      name: "Wiz",
-      role: "Founder",
-      bio: 'Hello “My Names James” my family own and run an events venue here in Derbyshire UK. My background is sales and marketing and in the last few years I have been exploring crypto.',
-      image: hyenaImage,
-      link: "#"
-    },
+  import greg from "~/assets/Greg_Hyena.png";
+  import ian from "~/assets/Ian_Hyena.png";
+  import wiz from "~/assets/Wiz_Hyena.png";
+  import imzi from "~/assets/Imzi_hyena.png";
+
+  const team = [ 
     {
       name: "Greg",
       role: "Co-Founder",
       bio: "Hi, I’m Greg Brown Co-Founder of HaHa Hyenas, I have worked over a year building the infrastructure, team, and vision for this project and cant wait for you all to see it.",
-      image: hyenaImage,
+      image: greg,
       link: "#"
     },
     {
       name: "Ian",
       role: "Comedian",
       bio: "Hello, I am Ian I made my comedy debut in 2017 after launching the popular YouTube and TikTok channel, 7 Day Summary. During that time, I was responsible for writing over 50 weekly jokes.",
-      image: hyenaImage,
+      image: ian,
       link: "#"
     },
+    {
+      name: "Wiz",
+      role: "Founder",
+      bio: 'Hello “My Names James” my family own and run an events venue here in Derbyshire UK. My background is sales and marketing and in the last few years I have been exploring crypto.',
+      image: wiz,
+      link: "#"
+    }, 
     {
       name: "Imzi",
       role: "Artist",
       bio: "Originally from Central Asia I graduated from the Institute of Art and Design here in Uzbekistan as a sculptor. I become the chief artist for the Assai Design Studio and developed my style and love for digital art.",
-      image: hyenaImage,
+      image: imzi,
       link: "#"
     }
   ];

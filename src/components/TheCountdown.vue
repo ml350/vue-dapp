@@ -4,7 +4,7 @@
     import VueCountdown from '@chenfengyuan/vue-countdown';
 
     const now = new Date(); 
-    const targetDate = new Date(2024, 3, 1);
+    const targetDate = new Date(2024, 3, 20); 
     const time = ref<number>(targetDate.getTime() - now.getTime());
 </script>
 
