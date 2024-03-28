@@ -7,6 +7,7 @@
   import Logo from '~/assets/logo.png' 
   import darkLogo from '~/assets/logo2.png' 
   import hyena from '~/assets/hyenaTsp.png'
+  import nftCalendar from '~/assets/nft-calendar-transparent.png'
   const logo = computed(() => (isDark.value ? Logo : darkLogo))
   
   async function toggleLocales() {
@@ -70,14 +71,19 @@
               <a v-else flex flex-wrap justify-end text-xs lg:text-xl hover:text-red-600 :title="t(link.titleKey)" @click="link.action">
                 <div :class="link.icon" /> {{ link.label }}
               </a>
-            </li>
+            </li>  
           </ul> 
+
+            <a href="https://nftcalendar.io" target="_blank" flex justify-end items-center>
+              As seen on:
+              <img :src="nftCalendar" w-25 alt="NFT Calendar"/>
+            </a>
         </div>
         
         </div>
       <hr mb-2 border-gray-200 sm:mx-auto dark:border-gray-700/>
       <span block text-sm text-gray-500 sm:text-center dark:text-gray-400>
-        ©2023 <a href="https://ovoono.studio" hover:underline>OvoOno Studio</a>. {{ t('footer.rights') }}.
+        ©2024 <a href="https://discord.gg/SSJPvdyH69" hover:underline>OvoOno Studio</a>. {{ t('footer.rights') }}.
       </span>
     </div> 
   </footer> 

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"> 
+    <div class="py-8 md:px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"> 
       <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
         <div v-for="member in team" :key="member.name" class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
           <div class="p-5 flex flex-col items-center">
@@ -29,6 +29,7 @@
   import ian from "~/assets/Ian_Hyena.png";
   import wiz from "~/assets/Wiz_Hyena.png";
   import imzi from "~/assets/Imzi_hyena.png";
+  import bez from "~/assets/Doginal_Dog_7605.png";
 
   const team = [ 
     {
@@ -58,7 +59,14 @@
       bio: "Originally from Central Asia I graduated from the Institute of Art and Design here in Uzbekistan as a sculptor. I become the chief artist for the Assai Design Studio and developed my style and love for digital art.",
       image: imzi,
       link: "#"
-    }
+    },
+    {
+      name: "bez",
+      role: "Dev",
+      bio: "a dev you didnt know you needed",
+      image: bez,
+      link: "https://twitter.com/bezmir369"
+    } 
   ];
 </script>
   

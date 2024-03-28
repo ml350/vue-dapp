@@ -127,7 +127,7 @@
 
     <p text-center text-white >{{ t('section04.para') }}</p>
     <!-- Main Parent Div (Whitelist & Public Sale) -->  
-    <div class="w-full md:w-full" px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>  
+    <div class="w-full md:w-full" md:px-8 py-8 flex flex-col md:flex-row md:justify-center md:items-center space-y-8 md:space-y-0 md:space-x-8>  
         <!-- Iterating over salesData -->
         <div 
             v-for="sale in salesData" 
