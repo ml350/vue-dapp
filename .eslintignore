@@ -8,3 +8,4 @@ pnpm-lock.yaml
 dist/*
 locales/*.yml
 src/assets/*
+public/*
