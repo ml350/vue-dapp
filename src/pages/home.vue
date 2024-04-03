@@ -3,8 +3,8 @@
   /*global useI18n, computed, isDark*/
   /*eslint no-undef: "error"*/
   import { ref } from 'vue'; 
-  import roadmap from '~/assets/roadmap.png' 
-  import darkRoadmap from '~/assets/darkRoadmap.png' 
+  import roadmap from '~/assets/roadmapfinal.webp' 
+  import darkRoadmap from '~/assets/roadmapfinal.webp' 
   const { t, rt  } = useI18n() 
   const Roadmap = computed(() => (isDark.value ? roadmap : darkRoadmap))
   const section04Data = {
